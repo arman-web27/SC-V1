@@ -1,0 +1,3157 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,minimum-scale=1"
+    />
+    <meta name="theme-color" content="#FCFBF7" />
+    <title>ShantanCare Ayurvedic Kit — बेहतर स्वास्थ्य, बेहतर कल</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Halant:wght@400;600;700&family=Hind:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+    />
+    <style>
+      :root {
+        --blue: #C2185B;
+        --navy: #182033;
+        --ink: #182033;
+        --muted: #182033;
+        --line: #F5E5E9;
+        --tint: #FCEEF3;
+        --w: 450px;
+        --shadow: 0 8px 25px #18203310;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 20px;
+      }
+      body {
+        font-family: Hind, sans-serif;
+        background: #FCFBF7;
+        color: var(--ink);
+        display: flex;
+        justify-content: center;
+      }
+      button,
+      input {
+        font: inherit;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      button,
+      a,
+      input {
+        -webkit-tap-highlight-color: transparent;
+      }
+      button {
+        cursor: pointer;
+      }
+      button:focus-visible,
+      a:focus-visible {
+        outline: 3px solid #D7A1B5;
+        outline-offset: 4px;
+      }
+      .page {
+        width: 100%;
+        max-width: var(--w);
+        background: #FCFBF7;
+        min-height: 100vh;
+        padding-bottom: 90px;
+        border-inline: 1px solid var(--line);
+        overflow: hidden;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Halant, serif;
+        line-height: 1.35;
+      }
+      h2 {
+        font-size: 24px;
+      }
+      h3 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      section {
+        padding: 32px 20px;
+        border-bottom: 1px solid var(--line);
+      }
+      section > p + p {
+        margin-top: 13px;
+      }
+      .topbar {
+        height: 74px;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid var(--line);
+      }
+      .brand {
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--navy);
+        line-height: 1.1;
+      }
+      .brand i {
+        font-size: 19px;
+      }
+      .brand small {
+        display: block;
+        font:
+          600 9px/1.8 Hind,
+          sans-serif;
+        letter-spacing: 2px;
+        margin-top: 5px;
+      }
+      .header-cta {
+        color: var(--blue);
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 8px 13px;
+        font-size: 13px;
+        font-weight: 600;
+      }
+      .kicker {
+        font:
+          700 18px/1.5 Hind,
+          sans-serif;
+        letter-spacing: 2px;
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      .section-head {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .section-head h2 {
+        max-width: 370px;
+        margin: auto;
+      }
+      .banner {
+        padding-top: 36px;
+        text-align: center;
+        min-height: 800px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .banner h1 {
+        font-size: 38px;
+        line-height: 1.35;
+        margin: 4px 0 16px;
+      }
+      .banner h1 span {
+        color: var(--blue);
+      }
+      .banner p {
+        font-size: 15px;
+      }
+      .hero-emblem {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 210px;
+        width: 100%;
+        margin: 15px 0;
+        color: var(--blue);
+        background: radial-gradient(ellipse, #FCEEF3 0, white 68%);
+      }
+      .hero-emblem > i {
+        font-size: 75px;
+        z-index: 1;
+      }
+      .hero-emblem > span {
+        font-size: 14px;
+        margin-top: 18px;
+        z-index: 1;
+      }
+      .orbit {
+        position: absolute;
+        width: 180px;
+        height: 180px;
+        border: 1px solid #E8CDD5;
+        border-radius: 50%;
+      }
+      .orbit:before {
+        content: "";
+        position: absolute;
+        inset: -15px;
+        border: 1px dashed #F5E5E9;
+        border-radius: 50%;
+      }
+      .hero-question {
+        font-weight: 600;
+        margin-top: 17px;
+        font-size: 17px;
+      }
+      .cta,
+      .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        background: var(--blue);
+        color: #fff;
+        border: 0;
+        border-radius: 12px;
+        padding: 15px 20px;
+        font-size: 16px;
+        font-weight: 600;
+        box-shadow: 0 7px 18px #C2185B24;
+        margin-top: 22px;
+        width: 100%;
+        transition: background 0.2s;
+      }
+      .cta:hover,
+      .submit:hover,
+      .sticky a:hover {
+        background: var(--navy);
+      }
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 18px;
+      }
+      .pill-row span {
+        border: 1px solid var(--line);
+        border-radius: 30px;
+        padding: 5px 10px;
+        font-size: 12px;
+        color: var(--navy);
+      }
+      .emotional-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin: 22px 0;
+      }
+      .emotional-card {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        min-height: 155px;
+        padding: 25px 12px;
+        text-align: center;
+        background: linear-gradient(145deg, #fff, var(--tint));
+      }
+      .emotional-card i {
+        color: var(--blue);
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+      .emotional-card h3 {
+        font-size: 18px;
+      }
+      .quote-box {
+        border-left: 3px solid var(--blue);
+        background: var(--tint);
+        padding: 20px;
+        border-radius: 0 14px 14px 0;
+        font-size: 20px;
+        font-family: Halant, serif;
+        margin-top: 22px;
+        color: var(--navy);
+      }
+      .problem-cards {
+        display: grid;
+        gap: 20px;
+        position: relative;
+      }
+      .problem-cards:before {
+        content: "";
+        position: absolute;
+        left: 24px;
+        top: 40px;
+        bottom: 40px;
+        width: 1px;
+        background: var(--line);
+      }
+      .problem-card {
+        display: grid;
+        grid-template-columns: 50px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+      }
+      .number {
+        display: grid;
+        place-items: center;
+        width: 49px;
+        height: 49px;
+        border-radius: 50%;
+        background: #FCFBF7;
+        border: 1px solid #E8CDD5;
+        color: var(--blue);
+        font-weight: 700;
+        position: relative;
+      }
+      .problem-card-body {
+        min-height: 166px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 24px 18px;
+        background: linear-gradient(130deg, white, #FCEEF3);
+        box-shadow: var(--shadow);
+      }
+      .problem-card-body i {
+        font-size: 32px;
+        color: var(--blue);
+        margin-bottom: 20px;
+      }
+      .problem-card-body h3 {
+        font-size: 21px;
+      }
+      .product-panel {
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+      .kit-visual {
+        padding: 28px 12px;
+        margin-bottom: 24px;
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: linear-gradient(145deg, #fff, #FCEEF3);
+        text-align: center;
+      }
+      .kit-mark {
+        color: var(--navy);
+        font-size: 27px;
+        font-weight: 700;
+      }
+      .formula-pair {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin: 24px 4px;
+      }
+      .formula-pair > div {
+        background: #FCFBF7;
+        border: 1px solid #E8CDD5;
+        border-top: 4px solid var(--blue);
+        border-radius: 12px;
+        padding: 23px 8px;
+        box-shadow: var(--shadow);
+      }
+      .formula-pair i {
+        display: block;
+        color: var(--blue);
+        font-size: 30px;
+        margin-bottom: 18px;
+      }
+      .formula-pair strong {
+        display: block;
+        letter-spacing: 2px;
+        color: var(--navy);
+        font-size: 13px;
+      }
+      .formula-pair small {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .kit-caption {
+        font-size: 10px;
+        letter-spacing: 1.3px;
+        color: var(--blue);
+      }
+      .product-panel > h3 {
+        margin: 20px 0 15px;
+      }
+      .cards {
+        display: grid;
+        gap: 14px;
+      }
+      .card {
+        border: 1px solid var(--line);
+        padding: 20px;
+        border-radius: 16px;
+        background: #FCFBF7;
+        box-shadow: var(--shadow);
+      }
+      .card h3 {
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .card-icon {
+        color: var(--blue);
+        font-size: 34px;
+        margin: 4px 0 20px;
+      }
+      .guidance .card {
+        min-height: 190px;
+      }
+      .how-flow {
+        display: grid;
+        gap: 24px;
+      }
+      .how-step {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr);
+        align-items: center;
+        gap: 10px;
+        min-height: 190px;
+      }
+      .how-symbol {
+        height: 160px;
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        display: grid;
+        place-items: center;
+        color: var(--blue);
+        font-size: 50px;
+        background: var(--tint);
+      }
+      .how-node {
+        font-size: 11px;
+        color: var(--blue);
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        width: 27px;
+        height: 27px;
+        display: grid;
+        place-items: center;
+      }
+      .how-step:nth-child(even) .how-symbol {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      .how-step:nth-child(even) .how-node {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .how-step:nth-child(even) > div:last-child {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .how-step h3 {
+        font:
+          600 18px/1.4 Hind,
+          sans-serif;
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .how-step p {
+        font-size: 14px;
+        line-height: 1.6;
+      }
+      .comparison ul {
+        padding-left: 19px;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+      .comparison li {
+        margin: 12px 0;
+      }
+      .comparison li::marker {
+        color: var(--blue);
+      }
+      .herbs {
+        display: grid;
+        gap: 18px;
+      }
+      .herb {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .herb-visual {
+        height: 185px;
+        position: relative;
+        display: grid;
+        place-items: center;
+        background: radial-gradient(circle, #FCEEF3, white);
+        color: var(--blue);
+      }
+      .herb-visual > i {
+        font-size: 78px;
+      }
+      .herb-visual > span {
+        position: absolute;
+        top: 17px;
+        left: 18px;
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+      .herb:nth-child(even) .herb-visual > i {
+        transform: rotate(-20deg);
+      }
+      .herb-content {
+        padding: 18px;
+        text-align: center;
+        border-top: 1px solid var(--line);
+      }
+      .herb-content h3 {
+        color: var(--navy);
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+      .use-flow {
+        display: grid;
+        gap: 24px;
+      }
+      .use-step {
+        display: grid;
+        grid-template-columns: 118px minmax(0, 1fr);
+        gap: 18px;
+        align-items: center;
+        min-height: 170px;
+      }
+      .use-symbol {
+        width: 118px;
+        height: 118px;
+        border: 1px solid #E8CDD5;
+        border-radius: 50%;
+        background: var(--tint);
+        display: grid;
+        place-items: center;
+        color: var(--blue);
+        font-size: 36px;
+      }
+      .use-step h3 {
+        color: var(--navy);
+        margin-bottom: 8px;
+      }
+      .use-step p {
+        font-size: 15px;
+      }
+      .trust-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .trust-card {
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 24px 10px;
+        text-align: center;
+      }
+      .trust-card > i {
+        font-size: 35px;
+        color: var(--blue);
+        margin-bottom: 18px;
+      }
+      .trust-card h3 {
+        font-size: 19px;
+        margin-bottom: 6px;
+      }
+      .trust-card p {
+        font-size: 13px;
+      }
+      .offer > p {
+        text-align: center;
+      }
+      .offer-box {
+        padding: 25px 18px;
+        border: 1px solid #E8CDD5;
+        border-radius: 22px;
+        margin-top: 23px;
+        text-align: center;
+        background: linear-gradient(145deg, white, #FCEEF3);
+      }
+      .offer-box > span {
+        font-size: 16px;
+        color: var(--navy);
+      }
+      .price {
+        font:
+          700 54px/1.5 Hind,
+          sans-serif;
+        color: var(--blue);
+        margin: 10px 0;
+      }
+      .price span {
+        font-size: 25px;
+      }
+      .offer-notes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      .offer-notes > div {
+        border: 1px solid var(--line);
+        padding: 17px 7px;
+        background: #FCFBF7;
+        border-radius: 12px;
+        font-size: 13px;
+      }
+      .offer-notes i {
+        display: block;
+        font-size: 22px;
+        color: var(--blue);
+        margin-bottom: 10px;
+      }
+      #order-form > p {
+        text-align: center;
+        margin-top: -12px;
+        margin-bottom: 22px;
+      }
+      .form-card {
+        border: 1px solid #E8CDD5;
+        padding: 24px 18px;
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+      }
+      .field {
+        margin-bottom: 17px;
+      }
+      .field label {
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom: 7px;
+      }
+      .field input {
+        width: 100%;
+        height: 50px;
+        border: 1px solid #E8CDD5;
+        border-radius: 10px;
+        padding: 0 12px;
+        background: #FCFBF7;
+        color: var(--ink);
+        min-width: 0;
+      }
+      .field input:focus {
+        outline: 3px solid #C2185B1a;
+        border-color: var(--blue);
+      }
+      .err {
+        display: none;
+        font-size: 12px;
+        color: #a12020;
+        margin-top: 5px;
+      }
+      .err.show {
+        display: block;
+      }
+      .secure {
+        font-size: 12px;
+        line-height: 1.8;
+        text-align: center;
+        color: var(--muted);
+        margin-top: 15px;
+      }
+      .order-status {
+        font-size: 14px;
+        color: var(--navy);
+        margin-top: 10px;
+      }
+      .order-status:empty {
+        display: none;
+      }
+      .benefits-title {
+        text-align: center;
+        margin-top: 24px;
+        font-size: 18px;
+      }
+      .stories {
+        display: grid;
+        gap: 16px;
+      }
+      .story {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        padding: 20px;
+        box-shadow: var(--shadow);
+      }
+      .story-head {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+      .avatar {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 50px;
+        background: var(--tint);
+        border: 1px solid var(--line);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        color: var(--blue);
+        font-size: 19px;
+      }
+      .story h3 {
+        font:
+          600 17px/1.5 Hind,
+          sans-serif;
+      }
+      .text-link {
+        display: block;
+        text-align: center;
+        color: var(--blue);
+        font-weight: 600;
+        margin-top: 22px;
+      }
+      .faq-list {
+        display: grid;
+        gap: 10px;
+      }
+      .faq {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        overflow: hidden;
+      }
+      .faq button {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 16px;
+        background: #FCFBF7;
+        border: 0;
+        text-align: left;
+        color: var(--ink);
+        font-weight: 600;
+        font-size: 16px;
+      }
+      .faq button span {
+        color: var(--blue);
+      }
+      .answer {
+        display: none;
+        padding: 0 16px 17px;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.7;
+      }
+      .faq.open .answer {
+        display: block;
+      }
+      .faq.open {
+        border-color: #E8CDD5;
+      }
+      .disclaimer h2 {
+        font-size: 18px;
+        margin-bottom: 13px;
+        color: var(--navy);
+      }
+      .disclaimer p {
+        font-size: 12px;
+        line-height: 1.7;
+      }
+      .disclaimer p + p {
+        margin-top: 10px;
+      }
+      footer {
+        padding: 30px 20px;
+        text-align: center;
+      }
+      footer p {
+        font-size: 12px;
+      }
+      .policy-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        margin: 23px 0;
+      }
+      .policy-links button {
+        border: 0;
+        background: none;
+        color: var(--blue);
+        font-size: 12px;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+      .sticky {
+        position: fixed;
+        bottom: max(10px, env(safe-area-inset-bottom));
+        left: 50%;
+        transform: translate(-50%, calc(100% + 50px));
+        max-width: calc(var(--w) - 20px);
+        width: calc(100% - 20px);
+        padding: 10px 10px 10px 18px;
+        background: #fffffff5;
+        backdrop-filter: blur(14px);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        box-shadow: 0 6px 28px #18203324;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        z-index: 80;
+        visibility: hidden;
+        transition:
+          transform 0.25s,
+          visibility 0.25s;
+      }
+      .sticky.show {
+        transform: translate(-50%, 0);
+        visibility: visible;
+      }
+      .sticky strong {
+        color: var(--navy);
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      .sticky small {
+        display: block;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      .sticky a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        flex-shrink: 0;
+        background: var(--blue);
+        color: white;
+        border-radius: 999px;
+        padding: 12px 22px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+        box-shadow: 0 3px 10px #C2185B25;
+      }
+      @media (max-width: 360px) {
+        .sticky { gap: 8px; padding-left: 14px; }
+        .sticky strong { font-size: 14px; }
+        .sticky a { padding-inline: 16px; font-size: 15px; }
+      }
+      .loading {
+        position: fixed;
+        inset: 0;
+        background: #18203370;
+        z-index: 300;
+        display: none;
+        align-items: center;
+        justify-content: center;
+      }
+      .loading.show {
+        display: flex;
+      }
+      .loading-box {
+        padding: 25px;
+        background: #FCFBF7;
+        border-radius: 16px;
+      }
+      .spinner {
+        width: 35px;
+        height: 35px;
+        border: 3px solid var(--line);
+        border-top-color: var(--blue);
+        border-radius: 50%;
+        margin: 0 auto 10px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .pp-overlay {
+        position: fixed;
+        inset: 0;
+        background: #18203380;
+        z-index: 999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .pp-overlay.show {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .pp-modal {
+        width: min(420px, 100%);
+        max-height: 75dvh;
+        overflow-y: auto;
+        background: #FCFBF7;
+        padding: 22px;
+        border-radius: 18px;
+        overscroll-behavior: contain;
+      }
+      .pp-close {
+        float: right;
+        position: sticky;
+        top: 0;
+        border: 0;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background: var(--tint);
+        color: var(--blue);
+        font-size: 22px;
+      }
+      .pp-mtitle {
+        font-size: 22px;
+        color: var(--navy);
+        margin: 0 35px 15px 0;
+      }
+      .pp-mtitle i {
+        margin-right: 8px;
+      }
+      .pp-mbadge {
+        font-size: 12px;
+        color: var(--blue);
+        margin-bottom: 12px;
+      }
+      .pp-modal p,
+      .pp-modal li {
+        font-size: 14px;
+        line-height: 1.7;
+        color: var(--muted);
+      }
+      .pp-modal ul {
+        padding-left: 20px;
+        margin: 13px 0;
+      }
+      .pp-mhl {
+        padding: 14px;
+        background: var(--tint);
+        border-left: 3px solid var(--blue);
+        font-size: 14px;
+        margin: 15px 0;
+      }
+      .pp-cgrid {
+        display: grid;
+        gap: 12px;
+      }
+      .pp-citem {
+        font-size: 14px;
+        padding: 12px;
+        border: 1px solid var(--line);
+      }
+      @media (max-width: 360px) {
+        section {
+          padding: 28px 15px;
+        }
+        .banner h1 {
+          font-size: 33px;
+        }
+        .topbar {
+          padding: 0 15px;
+        }
+        .brand {
+          font-size: 23px;
+        }
+        .problem-card {
+          gap: 10px;
+          grid-template-columns: 42px minmax(0, 1fr);
+        }
+        .number {
+          width: 41px;
+          height: 41px;
+        }
+        .problem-cards:before {
+          left: 20px;
+        }
+        .how-step {
+          gap: 7px;
+        }
+        .how-step h3 {
+          font-size: 16px;
+        }
+        .how-symbol {
+          font-size: 40px;
+          height: 140px;
+        }
+        .use-step {
+          grid-template-columns: 90px minmax(0, 1fr);
+          gap: 13px;
+        }
+        .use-symbol {
+          width: 90px;
+          height: 90px;
+        }
+        .sticky a {
+          padding: 12px;
+        }
+        .trust-card {
+          padding: 20px 8px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *:before,
+        *:after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+    <style>
+      /* Soft botanical palette */
+      :root {
+        --paper: #FCFBF7;
+        --cream: #FCFBF7;
+        --cream-deep: #FCFBF7;
+        --line: #E8CDD5;
+        --tint: #FCEEF3;
+      }
+      body {
+        background: #FCFBF7;
+      }
+      .page { background: var(--paper); }
+      section,
+      footer {
+        background: var(--paper);
+      }
+      .banner,
+      #problem-section,
+      #product,
+      #guidance,
+      #comparison,
+      #ingredients,
+      #routine,
+      #quality,
+      #experiences,
+      #faq {
+        background: var(--cream);
+      }
+      .emotional-card,
+      .card,
+      .story,
+      .trust-card,
+      .herb,
+      .problem-card-body,
+      .form-card,
+      .offer-box,
+      .formula-pair > div,
+      .faq button,
+      .loading-box,
+      .pp-modal {
+        background: #FCFBF7;
+      }
+      .problem-card-body {
+        background: linear-gradient(130deg, #FCFBF7, #FCEEF3);
+      }
+      .kit-visual,
+      .herb-visual,
+      .how-symbol,
+      .use-symbol {
+        background: linear-gradient(145deg, #FCFBF7, #FCEEF3);
+      }
+      .quote-box {
+        background: #FCEEF3;
+      }
+      .sticky {
+        background: rgba(252, 251, 247, 0.95);
+      }
+      .disclaimer {
+        background: var(--cream-deep);
+      }
+      /* Compact image-only hero banner */
+      .banner {
+        min-height: 0;
+        height: auto;
+        padding: 0;
+        display: block;
+        background: var(--cream);
+      }
+      .topbar { display: none !important; }
+      .banner > * { display: none !important; }
+      .banner::before {
+        display: none;
+      }
+      .banner > .hero-banner-image {
+        display: block !important;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1080 / 1920;
+        object-fit: cover;
+        object-position: center;
+      }
+      /* Alternating ribbons: original copy and type sizes are preserved. */
+      #problem-section .emotional-cards {
+        position: relative;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+        margin: 30px 0;
+      }
+      #problem-section .emotional-cards::before {
+        content: "";
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        left: 50%;
+        border-left: 2px dashed #E8CDD5;
+      }
+      #problem-section .emotional-card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        width: calc(100% - 24px);
+        min-height: 92px;
+        padding: 18px 20px;
+        text-align: left;
+        border: 1px solid #E8CDD5;
+        border-left: 4px solid var(--blue);
+        border-radius: 8px 28px 28px 8px;
+        background: linear-gradient(110deg, #FCEEF3, #FCFBF7 75%);
+        box-shadow: 0 6px 16px #18203309;
+      }
+      #problem-section .emotional-card:nth-child(even) {
+        justify-self: end;
+        flex-direction: row-reverse;
+        text-align: right;
+        border-left: 1px solid #E8CDD5;
+        border-right: 4px solid var(--blue);
+        border-radius: 28px 8px 8px 28px;
+        background: linear-gradient(250deg, #FCEEF3, #FCFBF7 75%);
+      }
+      #problem-section .emotional-card i {
+        display: grid;
+        place-items: center;
+        flex: 0 0 54px;
+        height: 54px;
+        margin: 0;
+        border-radius: 50%;
+        background: #FCFBF7;
+        box-shadow: 0 0 0 1px #E8CDD5;
+      }
+      #problem-section .emotional-card h3 {
+        min-width: 0;
+        color: var(--navy);
+      }
+      #problem-section .quote-box {
+        margin-top: 20px;
+        border-left: 0;
+        border-top: 2px solid var(--blue);
+        border-radius: 0 0 20px 20px;
+        text-align: center;
+        background: linear-gradient(180deg, #FCEEF3, #FCFBF7);
+      }
+      #problem-section {
+        padding-top: 34px;
+        padding-bottom: 34px;
+      }
+      @media (max-width: 360px) {
+        #problem-section .emotional-card { gap: 12px; padding: 16px 12px; width: calc(100% - 16px); }
+        #problem-section .emotional-card i { flex-basis: 46px; height: 46px; }
+      }
+    </style>
+    <style>
+      /* FOR HIM: alternating images and captions along a central timeline. */
+      #mens-concerns, #womens-concerns { background: var(--cream); }
+      #mens-concerns .section-head .kicker,
+      #womens-concerns .section-head .kicker { display: none; }
+      .men-flow { position: relative; display: grid; gap: 28px; }
+      .men-flow::before {
+        content: ""; position: absolute; left: 50%; top: 80px; bottom: 80px;
+        width: 2px; transform: translateX(-50%);
+        background: repeating-linear-gradient(to bottom, #D7A1B5 0 6px, transparent 6px 12px);
+      }
+      .men-step {
+        position: relative; display: grid;
+        grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr);
+        gap: 8px; align-items: center; min-height: 166px;
+      }
+      .men-image {
+        grid-column: 1; grid-row: 1; overflow: hidden; aspect-ratio: 1 / 1.06;
+        border: 2px solid #E8CDD5; border-radius: 18px;
+        background: #FCFBF7; box-shadow: 0 8px 20px #18203310;
+      }
+      .men-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+      .men-marker {
+        grid-column: 2; grid-row: 1; z-index: 1;
+        display: grid; place-items: center; width: 30px; height: 30px;
+        background: var(--cream); color: var(--blue); border: 2px solid var(--blue);
+        border-radius: 50%; box-shadow: 0 0 0 4px var(--cream);
+        font: 700 11px/1 Hind, sans-serif;
+      }
+      .men-caption {
+        grid-column: 3; grid-row: 1; position: relative; padding: 14px 11px;
+        background: #FCEEF3; border: 1px solid #E8CDD5; border-radius: 14px;
+        box-shadow: 0 5px 14px #18203308;
+      }
+      .men-caption h3 { font: 600 17px/1.5 Hind, sans-serif; color: var(--navy); }
+      .men-step:nth-child(even) .men-image { grid-column: 3; }
+      .men-step:nth-child(even) .men-caption { grid-column: 1; }
+      @media (max-width: 360px) {
+        .men-step { grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr); gap: 6px; min-height: 145px; }
+        .men-marker { width: 26px; height: 26px; font-size: 10px; }
+        .men-caption { padding: 12px 9px; }
+        .men-caption h3 { font-size: 15px; }
+        .men-image { border-radius: 14px; }
+        .men-flow::before { top: 70px; bottom: 70px; }
+      }
+    </style>
+    <style>
+      /* Shared pinned photo notes for both fertility sections. */
+      :is(#mens-concerns, #womens-concerns) .men-flow {
+        gap: 34px;
+        padding: 20px 8px 12px;
+        background: radial-gradient(circle, #C2185B12 1px, transparent 1px) 0 0 / 14px 14px;
+      }
+      :is(#mens-concerns, #womens-concerns) .men-flow::before { display: none; }
+      :is(#mens-concerns, #womens-concerns) .men-step {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+        grid-template-rows: 200px;
+        gap: 0;
+        width: 100%;
+        height: 200px;
+        min-height: 200px;
+        isolation: isolate;
+      }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even) {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      }
+      :is(#mens-concerns, #womens-concerns) .men-step::before {
+        content: "";
+        position: absolute;
+        inset: 5px 0;
+        z-index: -1;
+        background: #FCFBF7;
+        border: 1px solid #E8CDD5;
+        box-shadow: 0 6px 12px #18203312;
+        transform: rotate(1deg);
+      }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even)::before { transform: rotate(-1deg); }
+      :is(#mens-concerns, #womens-concerns) .men-image {
+        grid-column: 1;
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        min-width: 0;
+        aspect-ratio: 1 / 1;
+        padding: 7px 7px 18px;
+        border: 1px solid #E8CDD5;
+        border-radius: 2px;
+        background: #FCFBF7;
+        box-shadow: 0 8px 14px #18203326;
+        transform: rotate(-7deg);
+      }
+      :is(#mens-concerns, #womens-concerns) .men-image img { border: 1px solid #18203310; }
+      :is(#mens-concerns, #womens-concerns) .men-caption {
+        grid-column: 2;
+        min-width: 0;
+        padding: 26px 12px 14px 18px;
+        overflow-wrap: anywhere;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+      :is(#mens-concerns, #womens-concerns) .men-caption::after {
+        content: "";
+        display: block;
+        width: 32px;
+        height: 3px;
+        margin-top: 14px;
+        border-radius: 3px;
+        background: var(--blue);
+      }
+      :is(#mens-concerns, #womens-concerns) .men-marker {
+        position: absolute;
+        grid-column: auto;
+        grid-row: auto;
+        top: 13px;
+        right: 12px;
+        width: auto;
+        height: auto;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        color: var(--blue);
+        letter-spacing: 2px;
+      }
+      :is(#mens-concerns, #womens-concerns) .men-step::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        top: 50%;
+        margin-top: calc(-23.81% + 3px);
+        left: 24%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 32% 28%, #FCEEF3, #C2185B 55%, #86103E);
+        box-shadow: 2px 5px 5px #18203340;
+      }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even) .men-image { grid-column: 2; transform: rotate(7deg); }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even) .men-caption { grid-column: 1; padding: 26px 18px 14px 12px; }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even) .men-marker { right: auto; left: 12px; }
+      :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even)::after { left: auto; right: 24%; }
+      @media (max-width: 360px) {
+        :is(#mens-concerns, #womens-concerns) .men-flow { gap: 28px; padding-inline: 6px; }
+        :is(#mens-concerns, #womens-concerns) .men-step { min-height: 200px; }
+        :is(#mens-concerns, #womens-concerns) .men-caption { padding-left: 12px; padding-right: 8px; }
+        :is(#mens-concerns, #womens-concerns) .men-step:nth-child(even) .men-caption { padding-left: 8px; padding-right: 12px; }
+      }
+      /* Product showcase and formula cards */
+      #product { padding-top: 40px; padding-bottom: 40px; }
+      #product .section-head { margin-bottom: 24px; }
+      #product .section-head h2 { color: var(--navy); font-size: 30px; }
+      #product .product-panel { padding: 0; border: 0; box-shadow: none; }
+      .product-showcase {
+        position: relative; isolation: isolate; overflow: hidden;
+        padding: 42px 16px 18px; border: 1px solid #F5E5E9; border-radius: 24px;
+        background:
+          radial-gradient(circle at 18% 18%, rgba(255,255,255,.95) 0 9%, transparent 10%),
+          radial-gradient(circle at 84% 76%, rgba(235,190,207,.34) 0 15%, transparent 16%),
+          radial-gradient(ellipse at 50% 45%, #F5E5E9 0%, #FCFBF7 60%, #FCFBF7 90%);
+        box-shadow: 0 14px 32px #1820330b;
+        animation: showcaseBreath 6s ease-in-out infinite;
+      }
+      .product-showcase::before {
+        content: ""; position: absolute; z-index: -1; width: 245px; height: 245px;
+        left: 50%; top: 40px; transform: translateX(-50%);
+        border: 1px solid #E8CDD5; border-radius: 50%;
+        box-shadow: 0 0 0 20px #F5E5E92e;
+        animation: haloFloat 7s ease-in-out infinite;
+      }
+      @keyframes showcaseBreath { 50% { background-position: 10% 5%, 94% 90%, 50% 48%; } }
+      @keyframes haloFloat {
+        50% { transform: translateX(-50%) scale(1.06); opacity: 1; }
+      }
+      .product-badge {
+        position: absolute; top: 15px; left: 15px; display: inline-flex;
+        align-items: center; gap: 6px; padding: 6px 10px; border-radius: 30px;
+        background: #FCFBF7; border: 1px solid #F5E5E9;
+        color: var(--navy); font-size: 11px; font-weight: 600;
+      }
+      .product-photo {
+        display: block; width: 100%; height: 310px; object-fit: contain;
+        padding: 8px; border: 1px solid #E8CDD5; border-radius: 18px;
+        background: #FCFBF7; filter: drop-shadow(0 14px 12px #18203313);
+      }
+      .product-showcase figcaption {
+        display: flex; align-items: center; justify-content: center; gap: 8px;
+        padding-top: 15px; border-top: 1px solid #F5E5E9;
+        color: var(--navy); font-size: 11px; font-weight: 600; letter-spacing: 1px;
+      }
+      .product-showcase .product-badge,
+      .product-showcase figcaption { display: none; }
+      .product-showcase { padding: 22px 14px 14px; }
+      @media (prefers-reduced-motion: reduce) {
+        .product-showcase, .product-showcase::before { animation: none !important; }
+      }
+      #product .product-description { text-align: center; margin: 22px 6px; }
+      #product .kit-contents-heading {
+        display: flex; align-items: center; gap: 9px; color: var(--navy);
+        font-size: 23px; margin: 27px 0 17px;
+      }
+      .kit-contents-heading i { font-size: 18px; color: var(--blue); }
+      .formula-cards { display: grid; gap: 14px; }
+      .formula-card {
+        position: relative; isolation: isolate; overflow: hidden;
+        display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 14px;
+        padding: 23px 18px; border: 1px solid #F5E5E9; border-radius: 19px;
+        background: #FCFBF7; box-shadow: 0 6px 18px #18203308;
+        transition: transform .23s ease, border-color .23s ease, box-shadow .23s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .formula-card:nth-child(2) { background: linear-gradient(130deg, #FCFBF7, #FCEEF3); }
+      .formula-card:nth-child(3) { background: linear-gradient(130deg, #FCFBF7, #FCEEF3); }
+      .formula-card::after {
+        content: ""; position: absolute; z-index: -1; right: -35px; bottom: -40px;
+        width: 100px; height: 100px; border-radius: 50%; background: #F5E5E9;
+        opacity: .55; transition: transform .3s ease;
+      }
+      .formula-icon {
+        width: 48px; height: 48px; display: grid; place-items: center;
+        background: #FCEEF3; color: var(--blue); border: 1px solid #F5E5E9;
+        border-radius: 15px; font-size: 23px;
+        transition: transform .23s ease, background .23s ease, color .23s ease;
+      }
+      .formula-card h4 { margin: 1px 0 8px; color: var(--navy); font: 600 19px/1.45 Hind, sans-serif; }
+      .formula-card p { font-size: 15px; line-height: 1.65; }
+      #product .product-cta { margin-top: 24px; }
+      @media (hover: hover) and (pointer: fine) {
+        .formula-card:hover { transform: translateY(-4px); border-color: #D7A1B5; box-shadow: 0 14px 26px #C2185B17; }
+        .formula-card:hover .formula-icon { background: var(--blue); color: white; transform: rotate(-5deg); }
+        .formula-card:hover::after { transform: scale(1.5); }
+      }
+      .formula-card:active { transform: scale(.985); border-color: var(--blue); box-shadow: 0 3px 10px #C2185B12; }
+      .formula-card:active .formula-icon { background: var(--blue); color: white; }
+      @media (max-width: 360px) {
+        #product .section-head h2 { font-size: 28px; }
+        .formula-card { grid-template-columns: 42px minmax(0, 1fr); padding: 19px 14px; gap: 11px; }
+        .formula-icon { width: 42px; height: 42px; font-size: 21px; }
+        .formula-card h4 { font-size: 18px; }
+        .product-photo { height: 270px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .formula-card, .formula-icon, .formula-card::after { transition: none; transform: none !important; }
+      }
+    </style>
+    <style>
+      /* Product collection: arched display and an integrated kit contents panel. */
+      #product .section-head { text-align: center; margin-bottom: 28px; }
+      #product .section-head .kicker {
+        padding-left: 0;
+        border-left: 0;
+        letter-spacing: 2px;
+      }
+      #product .section-head h2 { margin: auto; max-width: 370px; }
+      #product .product-showcase {
+        padding: 28px 18px 18px;
+        border: 1px solid #E8CDD5;
+        border-bottom: 0;
+        border-radius: 150px 150px 0 0;
+        background: linear-gradient(180deg, #FCEEF3, #FCFBF7);
+        box-shadow: none;
+        animation: none;
+      }
+      #product .product-showcase::before {
+        inset: 12px 12px 0;
+        width: auto;
+        height: auto;
+        border-radius: 140px 140px 0 0;
+        border-bottom: 0;
+        box-shadow: none;
+        transform: none;
+        animation: none;
+      }
+      #product .product-photo {
+        height: auto;
+        width: 100%;
+        height: 330px;
+        aspect-ratio: auto;
+        object-fit: contain;
+        object-position: center;
+        padding: 0;
+        border: 0;
+        border-radius: 100px 100px 12px 12px;
+        background: transparent;
+        filter: drop-shadow(0 12px 12px #18203312);
+      }
+      #product .product-description {
+        margin: 0;
+        padding: 18px 22px 22px;
+        border: 1px solid #E8CDD5;
+        border-top: 0;
+        border-radius: 0 0 24px 24px;
+        background: #FCFBF7;
+        text-align: left;
+      }
+      #product .kit-contents-heading { margin: 32px 0 18px; }
+      #product .formula-cards {
+        counter-reset: kit-item;
+        gap: 0;
+        padding: 0 18px;
+        border: 1px solid #E8CDD5;
+        border-radius: 22px;
+        background: #FCFBF7;
+        box-shadow: 0 10px 28px #18203308;
+      }
+      #product .formula-card {
+        counter-increment: kit-item;
+        grid-template-columns: 48px minmax(0, 1fr);
+        gap: 14px;
+        padding: 24px 0;
+        overflow: visible;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+        transform: none;
+      }
+      #product .formula-card + .formula-card { border-top: 1px solid #E8CDD5; }
+      #product .formula-card::after { display: none; }
+      #product .formula-icon {
+        position: relative;
+        width: 48px;
+        height: 58px;
+        border: 0;
+        border-radius: 24px 24px 8px 8px;
+        background: #FCEEF3;
+        color: var(--blue);
+        transform: none;
+      }
+      #product .formula-icon::after {
+        content: counter(kit-item, decimal-leading-zero);
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        display: grid;
+        place-items: center;
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+        background: var(--navy);
+        color: #FCFBF7;
+        font: 600 10px/1 Hind, sans-serif;
+      }
+      #product .formula-card:last-child .formula-icon { background: #FCEEF3; color: var(--blue); }
+      #product .formula-card:hover .formula-icon {
+        background: var(--blue);
+        color: #FCFBF7;
+        transform: translateY(-2px) scale(1.04);
+      }
+      @media (max-width: 360px) {
+        #product .formula-cards { padding-inline: 14px; }
+        #product .formula-card { grid-template-columns: 42px minmax(0, 1fr); gap: 12px; }
+        #product .formula-icon { width: 42px; }
+        #product .product-photo { height: 290px; }
+      }
+      /* Reference layout: connected circular images beside compact text panels. */
+      :is(#how-it-works, #women-support) { background: var(--cream); }
+      :is(#how-it-works, #women-support) .how-flow { position: relative; --circle-size: 128px; gap: 24px; }
+      :is(#how-it-works, #women-support) .how-step {
+        position: relative; grid-template-columns: var(--circle-size) minmax(0, 1fr);
+        gap: 14px; min-height: 152px; align-items: center;
+      }
+      :is(#how-it-works, #women-support) .how-step:not(:last-child)::before {
+        content: ""; position: absolute; left: calc(var(--circle-size) / 2 - 1px);
+        top: 50%; height: calc(100% + 24px); width: 3px;
+        background: #E8CDD5; pointer-events: none;
+      }
+      :is(#how-it-works, #women-support) .how-symbol {
+        position: relative; z-index: 1; grid-column: 1; grid-row: 1;
+        width: var(--circle-size); height: var(--circle-size);
+        min-width: 0; overflow: hidden; border: 4px solid #D7A1B5; border-radius: 50%;
+        box-shadow: 0 6px 15px #18203310;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      }
+      :is(#how-it-works, #women-support) .how-symbol img {
+        display: block; width: 100%; height: 100%; object-fit: cover;
+        transition: transform .4s ease;
+      }
+      :is(#how-it-works, #women-support) .how-copy {
+        grid-column: 2; grid-row: 1;
+        min-width: 0; padding: 14px 12px; border: 1px solid #E8CDD5;
+        border-radius: 16px; background: linear-gradient(135deg, #FCFBF7, #FCEEF3);
+        box-shadow: 0 5px 14px #18203308;
+        transition: border-color .25s ease, box-shadow .25s ease;
+      }
+      :is(#how-it-works, #women-support) .how-copy h3 { font-size: 16px; line-height: 1.35; margin-bottom: 7px; }
+      :is(#how-it-works, #women-support) .how-copy p { font-size: 13px; line-height: 1.55; }
+      @keyframes compactHowReveal {
+        from { opacity: .25; transform: translateY(12px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      :is(#how-it-works, #women-support) .how-step.has-entered { animation: compactHowReveal .55s ease-out; }
+      @media (max-width: 360px) {
+        :is(#how-it-works, #women-support) .how-flow { --circle-size: 104px; }
+        :is(#how-it-works, #women-support) .how-step { gap: 12px; }
+        :is(#how-it-works, #women-support) .how-copy { padding: 10px 8px; }
+        :is(#how-it-works, #women-support) .how-copy h3 { font-size: 15px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        :is(#how-it-works, #women-support) .how-step, :is(#how-it-works, #women-support) .how-step * {
+          animation: none !important; transition: none !important; transform: none !important;
+        }
+      }
+      /* Larger reference-style cards for both wellness flows. */
+      :is(#how-it-works, #women-support) .how-flow { --circle-size: 148px; gap: 30px; }
+      #how-it-works .section-head .kicker,
+      #women-support .section-head .kicker { display: none; }
+      :is(#how-it-works, #women-support) .how-step {
+        grid-template-columns: var(--circle-size) minmax(0, 1fr);
+        gap: 16px; min-height: 172px;
+      }
+      :is(#how-it-works, #women-support) .how-symbol {
+        width: var(--circle-size); height: var(--circle-size); border-width: 4px;
+      }
+      :is(#how-it-works, #women-support) .how-copy {
+        padding: 19px 16px; min-height: 116px; border-radius: 17px;
+      }
+      :is(#how-it-works, #women-support) .how-copy h3 {
+        font-size: 18px; line-height: 1.45; margin-bottom: 9px;
+      }
+      :is(#how-it-works, #women-support) .how-copy p {
+        font-size: 14px; line-height: 1.65;
+      }
+      :is(#how-it-works, #women-support) .how-step:not(:last-child)::before {
+        height: calc(100% + 30px);
+      }
+      @media (max-width: 360px) {
+        :is(#how-it-works, #women-support) .how-flow { --circle-size: 124px; gap: 24px; }
+        :is(#how-it-works, #women-support) .how-step { gap: 12px; min-height: 150px; }
+        :is(#how-it-works, #women-support) .how-copy { padding: 15px 11px; min-height: 104px; }
+        :is(#how-it-works, #women-support) .how-copy h3 { font-size: 16px; }
+      }
+    </style>
+    <style>
+      /* Alternate the circle and text without adding an implicit grid column. */
+      :is(#how-it-works, #women-support) .how-step:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr) var(--circle-size);
+      }
+      :is(#how-it-works, #women-support) .how-step:nth-child(even) .how-symbol {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      :is(#how-it-works, #women-support) .how-step:nth-child(even) .how-copy {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      :is(#how-it-works, #women-support) .how-step::before,
+      :is(#how-it-works, #women-support) .how-step::after { display: none; }
+      :is(#how-it-works, #women-support) .how-symbol,
+      :is(#how-it-works, #women-support) .how-symbol img,
+      :is(#how-it-works, #women-support) .how-copy { transition: none; }
+      /* Rotate only the dashed ring; keep the photo stationary. */
+      :is(#how-it-works, #women-support) .how-symbol {
+        overflow: visible;
+        border-color: transparent;
+      }
+      :is(#how-it-works, #women-support) .how-symbol img {
+        border-radius: 50%;
+      }
+      :is(#how-it-works, #women-support) .how-symbol::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border: 2px dashed var(--blue);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: wellnessRingSpin 18s linear infinite;
+      }
+      @keyframes wellnessRingSpin {
+        to { transform: rotate(360deg); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        :is(#how-it-works, #women-support) .how-symbol::after { animation: none; }
+      }
+      /* Doctor profile: image, name and introduction above the guidance cards. */
+      #guidance { padding-top: 38px; padding-bottom: 38px; }
+      #guidance .guidance { display: none; }
+      #guidance .section-head h2 { color: var(--navy); }
+      .doctor-profile {
+        overflow: hidden; margin-bottom: 25px; border: 1px solid #E8CDD5;
+        border-radius: 23px; background: #FCFBF7; box-shadow: 0 12px 28px #18203310;
+      }
+      .doctor-photo-frame {
+        position: relative; margin: 10px 10px 0; overflow: hidden;
+        aspect-ratio: 4 / 3; border: 1px solid #F5E5E9; border-radius: 16px;
+        background: radial-gradient(ellipse at 50% 65%, #F5E5E9, #FCFBF7 80%);
+      }
+      .doctor-photo {
+        display: block; width: 100%; height: 100%; object-fit: contain;
+        transition: transform .45s ease;
+      }
+      .doctor-bio { padding: 22px 22px 25px; text-align: center; }
+      .doctor-name-row { display: flex; align-items: center; justify-content: center; gap: 10px; }
+      .doctor-profile-icon {
+        display: grid; place-items: center; flex: 0 0 38px; height: 38px;
+        color: var(--blue); background: #FCEEF3; border: 1px solid #F5E5E9;
+        border-radius: 12px; font-size: 18px;
+      }
+      .doctor-bio h3 { margin: 0; font-size: 25px; color: var(--navy); }
+      .doctor-introduction {
+        margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line);
+        color: var(--muted); font-size: 15px; line-height: 1.75;
+      }
+      #guidance .guidance { gap: 12px; }
+      #guidance .guidance .card {
+        display: grid; grid-template-columns: 43px minmax(0, 1fr);
+        gap: 6px 13px; min-height: 0; padding: 19px 17px; border-radius: 17px;
+        border-color: #F5E5E9; background: linear-gradient(135deg, #FCFBF7, #FCEEF3);
+        box-shadow: 0 5px 15px #18203308;
+        transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+      }
+      #guidance .guidance .card-icon {
+        grid-column: 1; grid-row: 1 / 3; display: grid; place-items: center;
+        width: 43px; height: 43px; margin: 0; border-radius: 13px;
+        background: #FCEEF3; color: var(--blue); font-size: 19px;
+        transition: background .22s ease, color .22s ease;
+      }
+      #guidance .guidance h3 { grid-column: 2; margin: 0; font-size: 20px; }
+      #guidance .guidance p { grid-column: 2; font-size: 14px; line-height: 1.65; }
+      @media (hover: hover) and (pointer: fine) {
+        .doctor-profile:hover .doctor-photo { transform: scale(1.025); }
+        #guidance .guidance .card:hover { transform: translateY(-3px); border-color: #D7A1B5; box-shadow: 0 10px 22px #C2185B15; }
+        #guidance .guidance .card:hover .card-icon { background: var(--blue); color: white; }
+      }
+      #guidance .guidance .card:active { transform: scale(.99); border-color: var(--blue); }
+      @media (max-width: 360px) {
+        .doctor-bio { padding: 19px 16px 22px; }
+        .doctor-bio h3 { font-size: 23px; }
+        #guidance .guidance .card { padding: 16px 13px; gap: 6px 10px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .doctor-photo, #guidance .guidance .card, #guidance .guidance .card-icon {
+          transition: none !important; transform: none !important;
+        }
+      }
+    </style>
+    <style>
+      /* Editorial portrait with an overlapping introduction panel. */
+      #guidance {
+        background: radial-gradient(ellipse at 100% 35%, #FCEEF3, transparent 65%), #FCFBF7;
+      }
+      #guidance .doctor-profile {
+        position: relative;
+        overflow: visible;
+        margin: 30px 0 0;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      #guidance .doctor-photo-frame {
+        margin: 0 18px 0 0;
+        padding: 12px 12px 34px;
+        aspect-ratio: 1 / 1;
+        border: 1px solid #E8CDD5;
+        border-radius: 70px 18px 18px 18px;
+        background: linear-gradient(145deg, #FCEEF3, #FCFBF7);
+        box-shadow: 10px 10px 0 #F5E5E9;
+      }
+      #guidance .doctor-photo {
+        border-radius: 58px 10px 10px 10px;
+        object-fit: contain;
+      }
+      #guidance .doctor-bio {
+        position: relative;
+        z-index: 1;
+        margin: -24px 0 0 18px;
+        padding: 24px 20px;
+        text-align: left;
+        border: 1px solid #E8CDD5;
+        border-top: 3px solid var(--blue);
+        border-radius: 6px 6px 24px 6px;
+        background: #FCFBF7;
+        box-shadow: 0 12px 28px #18203310;
+        transition: box-shadow .3s ease;
+      }
+      #guidance .doctor-name-row { justify-content: flex-start; }
+      #guidance .doctor-profile-icon {
+        border: 0;
+        border-radius: 50%;
+        background: var(--blue);
+        color: #FCFBF7;
+        box-shadow: 0 0 0 5px #FCEEF3;
+      }
+      #guidance .doctor-introduction {
+        margin-top: 20px;
+        padding-top: 18px;
+        border-top: 1px solid #E8CDD5;
+      }
+      #guidance .doctor-photo-frame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(110deg, transparent 35%, #ffffff65 50%, transparent 65%);
+        transform: translateX(-120%);
+        pointer-events: none;
+      }
+      @media (hover: hover) and (pointer: fine) {
+        #guidance .doctor-profile:hover .doctor-photo-frame::after {
+          animation: guidanceLightSweep 1.2s ease-out;
+        }
+        #guidance .doctor-profile:hover .doctor-bio { box-shadow: 0 16px 32px #C2185B18; }
+      }
+      @keyframes guidanceLightSweep { to { transform: translateX(120%); } }
+      @media (max-width: 360px) {
+        #guidance .doctor-photo-frame { margin-right: 12px; }
+        #guidance .doctor-bio { margin-left: 12px; padding: 20px 16px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #guidance .doctor-photo-frame::after { animation: none !important; }
+        #guidance .doctor-bio { transition: none; }
+      }
+      /* Editorial comparison: paired headings and individually framed rows. */
+      #comparison { padding-top: 38px; padding-bottom: 38px; }
+      #comparison .section-head h2 { color: var(--navy); }
+      #comparison { background: linear-gradient(180deg, #FCFBF7, #F8EDF0); }
+      #comparison .section-head { text-align: center; margin-bottom: 26px; }
+      #comparison .kicker { letter-spacing: 2.6px; }
+      #comparison .section-head h2 { max-width: 310px; margin: 10px auto 0; font-size: 28px; }
+      .options-frame { position: relative; }
+      .options-versus {
+        position: absolute; z-index: 1; top: 61px; left: 50%; transform: translateX(-50%);
+        display: grid; place-items: center; width: 39px; height: 39px;
+        border: 4px solid #FCFBF7; border-radius: 50%; background: #FCFBF7;
+        color: #182033; font: 700 11px/1 Hind, sans-serif; letter-spacing: 1px;
+        box-shadow: 0 3px 12px #18203312;
+      }
+      .options-table { width: 100%; border-collapse: separate; border-spacing: 0 9px; table-layout: fixed; text-align: left; }
+      .options-table th { width: 50%; padding: 22px 15px; text-align: left; vertical-align: top; }
+      .option-ivf { background: #182033; color: #fff; border-radius: 20px 0 0 20px; }
+      .option-ayurveda { background: #A81750; color: #fff; border-radius: 0 20px 20px 0; }
+      .options-table th + th { border-left: 5px solid #FCFBF7; padding-left: 22px; }
+      .options-table td + td { border-left: 1px solid #EEDDE3; }
+      .option-header-icon {
+        display: grid; place-items: center; width: 52px; height: 52px;
+        margin: 0 0 16px; border: 1px solid #ffffff30; border-radius: 50%;
+        background: #ffffff12; color: #fff; font-size: 23px;
+      }
+      .option-title { display: block; font: 700 21px/1.3 Hind, sans-serif; }
+      .option-subtitle { display: block; margin-top: 5px; font: 400 13px/1.5 Hind, sans-serif; color: #ffffffd9; }
+      .options-table td {
+        padding: 15px 14px; vertical-align: top; border-block: 1px solid #EEDDE3;
+        background: #fff; transition: background .2s ease;
+      }
+      .options-table td:first-child { border-left: 1px solid #EEDDE3; border-radius: 13px 0 0 13px; }
+      .options-table td:nth-child(2) { background: #FFF7FA; border-right: 1px solid #EEDDE3; border-radius: 0 13px 13px 0; }
+      .option-detail { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+      .option-category { color: #695D65; font-size: 11px; font-weight: 600; letter-spacing: .3px; }
+      .option-detail > i {
+        display: grid; place-items: center; width: 22px; height: 22px;
+        flex: 0 0 22px; background: #F5E5E9; border-radius: 50%;
+        color: var(--blue); font-size: 11px;
+        transition: color .2s ease, background .2s ease, transform .2s ease;
+      }
+      .options-table td:first-child .option-detail > i { color: #667085; background: #F0F1F4; }
+      .options-table td:nth-child(2) .option-detail > i { color: #A81750; background: #F8E1EA; }
+      .option-detail p { flex: 0 0 100%; color: #182033; font-size: 15px; font-weight: 500; line-height: 1.65; overflow-wrap: anywhere; }
+      @media (hover: hover) and (pointer: fine) {
+        .options-table tbody tr:hover td { background: #F5E5E9; }
+      }
+      @media (max-width: 360px) {
+        .options-table th { padding: 18px 10px 16px; }
+        .options-table td { padding: 14px 10px; }
+        .option-title { font-size: 19px; }
+        .option-detail p { font-size: 13px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .options-table td, .option-detail > i { transition: none !important; transform: none !important; }
+      }
+    </style>
+    <style>
+      /* Ingredient collection in the landing page's cream and rose palette. */
+      #ingredients { padding: 40px 20px; background: var(--cream); }
+      #ingredients .section-head { text-align: center; margin-bottom: 26px; }
+      #ingredients .kicker { color: var(--blue); letter-spacing: 2px; }
+      #ingredients .section-head h2 { color: var(--navy); font-size: 28px; max-width: 300px; margin: 10px auto 0; }
+      #ingredients .section-head::after { content: ''; display: block; width: 44px; height: 3px; border-radius: 3px; background: var(--blue); margin: 17px auto 0; }
+      #ingredients .herbs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; counter-reset: ingredient; }
+      #ingredients .herb { position: relative; display: grid; grid-template-columns: 140px minmax(0, 1fr); align-items: center; gap: 20px; padding: 22px 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 24px 8px 24px 8px; background: var(--tint); box-shadow: 0 5px 15px #18203306; counter-increment: ingredient; }
+      #ingredients .herb:nth-child(even) { background: var(--cream); border-radius: 8px 24px 8px 24px; }
+      #ingredients .herb:last-child { grid-column: auto; width: auto; justify-self: stretch; }
+      #ingredients .herb::after { content: counter(ingredient, decimal-leading-zero); position: absolute; top: 9px; right: 14px; color: #C2185B; opacity: .65; font: 500 11px/1 Hind, sans-serif; letter-spacing: 1px; }
+      #ingredients .herb-visual { position: relative; width: 140px; height: 140px; padding: 5px; overflow: hidden; border: 1px solid #D7A1B5; border-radius: 50%; background: var(--cream); box-shadow: 0 0 0 5px #F5E5E9; }
+      #ingredients .herb-visual span { display: none; }
+      #ingredients .herb-visual img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; transition: transform .3s ease; }
+      #ingredients .herb-content { display: block; min-width: 0; min-height: 0; padding: 0; border: 0; text-align: left; }
+      #ingredients .herb-content h3 { color: var(--blue); font-size: 25px; margin: 0; }
+      #ingredients .herb-content p { display: block; color: var(--navy); font-size: 13px; line-height: 1.65; overflow-wrap: anywhere; }
+      @media (hover: hover) and (pointer: fine) {
+        #ingredients .herb:hover .herb-visual img { transform: scale(1.06); }
+      }
+      @media (max-width: 360px) {
+        #ingredients { padding-inline: 16px; }
+        #ingredients .herb { grid-template-columns: 112px minmax(0, 1fr); padding: 21px 14px; gap: 15px; }
+        #ingredients .herb-visual { width: 112px; height: 112px; }
+        #ingredients .herb-content h3 { font-size: 21px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        #ingredients .herb-visual img { transition: none; transform: none !important; }
+      }
+    </style>
+    <style>
+      /* Morning-to-evening timeline with a separate duration ribbon. */
+      #routine { padding: 40px 20px; background: var(--cream); }
+      #routine .section-head { text-align: center; margin-bottom: 30px; }
+      #routine .section-head h2 { color: var(--navy); font-size: 29px; margin-top: 10px; }
+      #routine .kicker { color: var(--blue); letter-spacing: 2px; font-size: 10px; }
+      .ritual-cards { position: relative; display: grid; gap: 24px; }
+      .ritual-cards::before { content: ''; position: absolute; top: 30px; bottom: 140px; left: 23px; width: 1px; background: #D7A1B5; }
+      .ritual-card { position: relative; margin-left: 24px; padding: 22px 18px 0 32px; border: 1px solid var(--line); border-radius: 0 24px 24px 24px; background: var(--tint); }
+      .ritual-evening { background: var(--cream); }
+      .ritual-heading { display: flex; align-items: center; gap: 12px; margin-bottom: 19px; }
+      .ritual-icon { position: absolute; top: 18px; left: -24px; display: grid; place-items: center; width: 46px; height: 46px; border: 5px solid var(--cream); border-radius: 50%; background: var(--blue); color: #fff; font-size: 18px; }
+      .ritual-evening .ritual-icon { background: var(--navy); }
+      .ritual-heading h3 { color: var(--blue); font-size: 28px; margin: 0 0 2px; }
+      .ritual-evening .ritual-heading h3 { color: var(--navy); }
+      .ritual-heading p { color: var(--navy); font-size: 14px; line-height: 1.5; }
+      .ritual-step { margin-left: auto; align-self: flex-start; color: #D7A1B5; font: 600 38px/1 Hind, sans-serif; }
+      .ritual-doses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; padding: 14px 0; border-block: 1px solid var(--line); }
+      .ritual-dose { padding-right: 10px; }
+      .ritual-dose + .ritual-dose { padding-left: 16px; padding-right: 0; border-left: 1px solid #D7A1B5; }
+      .ritual-dose-label { display: flex; align-items: center; gap: 7px; color: var(--navy); font-size: 13px; margin-bottom: 5px; }
+      .ritual-dose-label i { color: var(--blue); }
+      .ritual-dose strong { display: block; color: var(--navy); font-size: 23px; font-weight: 600; line-height: 1.4; }
+      .ritual-water { display: flex; align-items: center; gap: 9px; margin: 0; padding: 14px 0; color: var(--navy); font-size: 13px; line-height: 1.6; }
+      .ritual-water i { flex-shrink: 0; color: var(--blue); font-size: 16px; }
+      .ritual-duration { position: relative; overflow: hidden; padding: 23px 20px; border-radius: 22px; background: var(--blue); color: #fff; }
+      .ritual-duration::after { content: ''; position: absolute; right: -35px; top: -65px; width: 160px; height: 160px; border: 1px solid #ffffff26; border-radius: 50%; pointer-events: none; }
+      .ritual-duration-top { display: flex; align-items: center; gap: 19px; }
+      .ritual-days { flex: 0 0 78px; text-align: center; padding-right: 18px; border-right: 1px solid #ffffff55; }
+      .ritual-days strong { display: block; font: 600 49px/1 Hind, sans-serif; }
+      .ritual-days span { font-size: 15px; }
+      .ritual-duration h3 { color: #fff; font-size: 22px; margin-bottom: 5px; }
+      .ritual-duration p { color: #fff; font-size: 13px; line-height: 1.65; }
+      @media (max-width: 360px) {
+        #routine { padding-inline: 16px; }
+        .ritual-card { padding-right: 13px; padding-left: 28px; }
+        .ritual-dose strong { font-size: 20px; }
+        .ritual-duration { padding: 20px 16px; }
+        .ritual-duration-top { gap: 14px; }
+        .ritual-days { flex-basis: 68px; padding-right: 14px; }
+        .ritual-duration h3 { font-size: 20px; }
+      }
+    </style>
+    <style>
+      #quality { padding-top: 40px; padding-bottom: 40px; background: var(--cream); }
+      #quality .section-head h2 { color: var(--navy); }
+      #quality .trust-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+      #quality .trust-card {
+        aspect-ratio: auto; overflow: hidden; padding: 0; border: 1px solid #E8CDD5;
+        border-radius: 19px; background: #FCFBF7; box-shadow: 0 7px 18px #1820330c;
+        transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+      }
+      .trust-card-image { height: 125px; overflow: hidden; background: #FCEEF3; }
+      .trust-card-image img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+      .trust-card-body { padding: 14px 11px 16px; text-align: center; }
+      .trust-card-body::before {
+        content: "—  —  —";
+        display: block;
+        margin-bottom: 7px;
+        color: #D7A1B5;
+        font-size: 13px;
+        letter-spacing: 2px;
+      }
+      .trust-card-body p { display: none; }
+      #quality .trust-card h3 { color: var(--navy); font-size: 18px; margin: 0 0 5px; }
+      #quality .trust-card p { font-size: 12px; line-height: 1.5; }
+      @media (hover: hover) and (pointer: fine) {
+        #quality .trust-card:hover { transform: translateY(-5px); border-color: #D7A1B5; box-shadow: 0 15px 27px #C2185B1c; }
+        #quality .trust-card:hover img { transform: scale(1.08); }
+      }
+      #quality .trust-card:active { transform: scale(.98); border-color: var(--blue); }
+      @media (max-width: 360px) { .trust-card-image { height: 105px; } #quality .trust-card h3 { font-size: 16px; } }
+      @media (prefers-reduced-motion: reduce) { #quality .trust-card, #quality .trust-card img { transition: none !important; transform: none !important; } }
+    </style>
+    <style>
+      /* Offer: cream stationery, blue price panel and delivery sticker. */
+      #offer {
+        position: relative; isolation: isolate; padding: 42px 20px 38px;
+        background: radial-gradient(circle at 100% 0, #F5E5E9 0, transparent 48%),
+          linear-gradient(155deg, #FCFBF7, #FCFBF7 55%, #FCEEF3);
+      }
+      #offer .section-head { margin-bottom: 15px; }
+      #offer .section-head h2 { color: var(--navy); font-size: 30px; line-height: 1.4; }
+      #offer > p { max-width: 355px; margin: 0 auto; font-size: 15px; line-height: 1.7; }
+      #offer .offer-box {
+        position: relative; margin-top: 28px; padding: 0; overflow: hidden;
+        border: 1px solid #E8CDD5; border-radius: 24px; background: #FCFBF7;
+        box-shadow: 0 17px 35px #18203314;
+      }
+      .offer-price-panel {
+        position: relative; padding: 29px 18px 24px; text-align: left;
+        background: linear-gradient(130deg, #9E144A, #C2185B); color: white;
+      }
+      .offer-product-name { display: block; padding-right: 83px; font-size: 17px; font-weight: 600; line-height: 1.5; }
+      #offer .price { color: white; margin: 9px 0 0; font-size: 52px; line-height: 1.3; letter-spacing: -1px; }
+      #offer .price span { font-size: 24px; color: #F5E5E9; letter-spacing: 0; }
+      .offer-delivery-sticker {
+        position: absolute; right: 15px; top: 21px; width: 77px; height: 77px;
+        display: flex; flex-direction: column; justify-content: center; align-items: center;
+        border: 2px solid #FCFBF7; border-radius: 50%; outline: 1px dashed #C2185B; outline-offset: -7px;
+        background: #FCEEF3; color: #182033; box-shadow: 0 6px 13px #18203333;
+        transform: rotate(9deg); animation: deliverySway 5s ease-in-out infinite;
+      }
+      .offer-delivery-sticker i { font-size: 19px; margin-bottom: 3px; }
+      .offer-delivery-sticker strong { font: 700 11px/1.2 Hind, sans-serif; letter-spacing: .6px; }
+      .offer-delivery-sticker small { font: 500 10px/1.2 Hind, sans-serif; }
+      #offer .offer-notes { padding: 20px 16px 0; margin: 0; gap: 11px; }
+      #offer .offer-notes > div {
+        position: relative; padding: 17px 9px 15px; border: 1px solid #F5E5E9;
+        border-radius: 14px; background: #FCEEF3; color: var(--navy);
+        box-shadow: 0 4px 10px #18203306;
+        transition: transform .23s ease, box-shadow .23s ease, border-color .23s ease;
+      }
+      #offer .offer-notes > div:nth-child(2), #offer .offer-notes > div:nth-child(3) { background: #FCEEF3; border-color: #E8CDD5; }
+      #offer .offer-notes i {
+        display: grid; place-items: center; width: 37px; height: 37px; margin: 0 auto 9px;
+        border: 1px solid #F5E5E9; border-radius: 11px; background: #FCFBF7; font-size: 18px;
+      }
+      #offer .offer-notes span { display: block; font-size: 13px; font-weight: 600; line-height: 1.45; }
+      #offer .offer-cta {
+        position: relative; overflow: hidden; width: calc(100% - 32px); margin: 20px 16px;
+        padding: 15px 12px; gap: 12px; font-size: 18px;
+        background: var(--blue); box-shadow: 0 8px 18px #C2185B2b;
+        transition: background .2s ease, transform .2s ease;
+      }
+      #offer .offer-cta::after {
+        content: ""; position: absolute; inset: 0; pointer-events: none;
+        background: linear-gradient(110deg, transparent 30%, #ffffff26 50%, transparent 70%);
+        transform: translateX(-130%); animation: offerShine 6s ease-in-out infinite;
+      }
+      @keyframes deliverySway { 50% { transform: rotate(4deg) translateY(-2px); } }
+      @keyframes offerShine { 0%, 65% { transform: translateX(-130%); } 90%, 100% { transform: translateX(130%); } }
+      @media (hover: hover) and (pointer: fine) {
+        #offer .offer-notes > div:hover { transform: translateY(-3px); border-color: #D7A1B5; box-shadow: 0 8px 17px #C2185B15; }
+        #offer .offer-cta:hover { background: var(--navy); transform: translateY(-2px); }
+      }
+      #offer .offer-cta:active, #offer .offer-notes > div:active { transform: scale(.98); }
+      @media (max-width: 360px) {
+        #offer { padding: 34px 15px; }
+        #offer .section-head h2 { font-size: 27px; }
+        .offer-price-panel { padding: 25px 15px 22px; }
+        .offer-product-name { font-size: 16px; padding-right: 72px; }
+        .offer-delivery-sticker { width: 68px; height: 68px; right: 12px; }
+        #offer .price { font-size: 46px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .offer-delivery-sticker, #offer .offer-cta::after { animation: none !important; }
+        #offer .offer-notes > div, #offer .offer-cta { transition: none !important; transform: none !important; }
+      }
+    </style>
+    <style>
+      #order-form { padding: 40px 20px; background: linear-gradient(160deg, #FCEEF3, #FCFBF7 65%, #FCFBF7); }
+      #order-form .section-head { margin-bottom: 18px; }
+      #order-form .section-head h2 { color: var(--navy); font-size: 31px; }
+      #order-form > p { margin-top: 0; margin-bottom: 24px; font-size: 15px; }
+      #order-form .form-card { padding: 0; overflow: hidden; border: 1px solid #E8CDD5; border-radius: 24px; background: #FCFBF7; box-shadow: 0 16px 34px #18203314; }
+      .order-summary { display: flex; align-items: center; gap: 12px; padding: 23px 18px; background: linear-gradient(125deg, #9E144A, #C2185B); color: white; }
+      .order-summary-icon { display: grid; place-items: center; flex: 0 0 43px; height: 43px; border: 1px solid #ffffff40; border-radius: 13px; background: #ffffff15; font-size: 21px; }
+      .order-summary-name { flex: 1; min-width: 0; }
+      .order-summary-name strong { display: block; font-size: 16px; line-height: 1.4; }
+      .order-summary-name small { display: block; margin-top: 4px; font-size: 11px; color: #F5E5E9; }
+      .order-summary-price { font: 700 25px/1.2 Hind, sans-serif; white-space: nowrap; }
+      #orderForm { padding: 23px 19px 20px; }
+      .order-fields-heading { display: flex; align-items: center; gap: 9px; margin-bottom: 21px; color: var(--navy); font: 600 18px/1.4 Hind, sans-serif; }
+      .order-fields-heading i { color: var(--blue); font-size: 17px; }
+      #orderForm .field { margin-bottom: 18px; }
+      #orderForm .field label { color: var(--navy); font-size: 14px; margin-bottom: 7px; }
+      #orderForm .field label i { color: #182033; width: 19px; margin-right: 4px; font-size: 13px; }
+      #orderForm .field input { height: 52px; font-size: 16px; border: 1px solid #E8CDD5; border-radius: 12px; background: #FCEEF3; padding: 0 13px; transition: background .2s ease, border-color .2s ease, box-shadow .2s ease; }
+      #orderForm .field input::placeholder { color: #182033; font-size: 13px; }
+      #orderForm .field input:focus { background: #FCFBF7; border-color: var(--blue); outline: 2px solid #C2185B2b; outline-offset: 1px; box-shadow: 0 4px 12px #C2185B0d; }
+      #orderForm .submit { margin-top: 23px; display: flex; justify-content: center; align-items: center; gap: 10px; min-height: 54px; font-size: 17px; border-radius: 13px; transition: background .2s ease, transform .2s ease, box-shadow .2s ease; }
+      #orderForm .submit:active { transform: scale(.985); }
+      #orderForm .secure { margin-top: 14px; font-size: 12px; line-height: 1.7; }
+      #orderForm .secure i { color: var(--blue); margin-right: 5px; }
+      #order-form .order-status:not(:empty) { margin: 0 19px 20px; padding: 12px; border-radius: 10px; background: #FCEEF3; }
+      #order-form .benefits-title { margin: 23px 0 12px; font: 600 16px/1.4 Hind, sans-serif; color: var(--navy); }
+      .order-benefit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+      .order-benefit { padding: 13px 5px; text-align: center; border: 1px solid #F5E5E9; border-radius: 13px; background: #FCFBF7; color: var(--navy); }
+      .order-benefit i { display: block; margin-bottom: 7px; color: var(--blue); font-size: 19px; }
+      .order-benefit span { display: block; font-size: 11px; line-height: 1.4; font-weight: 600; }
+      @media (hover: hover) and (pointer: fine) {
+        #orderForm .submit:hover { transform: translateY(-2px); background: var(--navy); box-shadow: 0 10px 22px #C2185B30; }
+      }
+      @media (max-width: 360px) {
+        #order-form { padding: 34px 15px; }
+        .order-summary { padding: 21px 14px; gap: 9px; }
+        .order-summary-icon { flex-basis: 35px; height: 39px; font-size: 18px; }
+        .order-summary-name strong { font-size: 14px; }
+        .order-summary-price { font-size: 22px; }
+        #orderForm { padding: 21px 15px 18px; }
+      }
+      @media (prefers-reduced-motion: reduce) { #orderForm .field input, #orderForm .submit { transition: none !important; transform: none !important; } }
+    </style>
+    <style>
+      #experiences .stories { display:grid; grid-template-columns:minmax(0,1fr); gap:13px; }
+      #experiences .story { position:relative; padding:15px; border:1px solid var(--line); border-radius:18px; background:var(--paper); box-shadow:0 4px 12px #18203306; overflow:hidden; }
+      #experiences .story-head { display:flex; align-items:center; gap:11px; margin:0 0 12px; padding:0 30px 0 0; border:0; }
+      #experiences .story-photo { position:relative; width:46px; height:46px; flex:0 0 46px; border:1px solid #D7A1B5; border-radius:50%; padding:3px; background:var(--cream); overflow:hidden; }
+      #experiences .story-photo span { position:absolute; inset:3px; display:grid; place-items:center; border-radius:50%; background:var(--tint); color:var(--blue); font-size:18px; font-weight:600; }
+      #experiences .story-photo img { position:relative; display:block; width:100%; height:100%; object-fit:cover; border-radius:50%; }
+      #experiences .story-person { min-width:0; }
+      #experiences .story-person h3 { margin:0 0 1px; color:var(--navy); font-size:17px; line-height:1.4; }
+      #experiences .story-person small { display:block; color:var(--muted); font-size:12px; line-height:1.4; }
+      #experiences .story-quote { position:absolute; top:19px; right:17px; margin:0; color:var(--blue); }
+      #experiences .story-quote span { display:block; font:42px/1 Georgia,serif; height:30px; }
+      #experiences .story p { margin:0; padding:11px 12px; border-left:2px solid #D7A1B5; border-radius:0 10px 10px 0; background:var(--tint); color:var(--navy); font-size:14px; line-height:1.6; overflow-wrap:anywhere; }
+      @media(max-width:360px) { #experiences .story { padding:12px; } #experiences .story-head { gap:9px; } #experiences .story p { padding:10px; } }
+    </style>
+    <style>
+      #disclaimer { padding:22px 24px; background:var(--cream-deep); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+      #disclaimer h2 { margin:0 0 9px; font-size:13px; font-weight:600; color:#182033; letter-spacing:.03em; }
+      #disclaimer p { margin:0; font-size:11px; line-height:1.7; color:#182033; }
+      #disclaimer p + p { margin-top:7px; }
+      .page > footer { padding:28px 22px 30px; background:var(--cream); text-align:center; }
+      footer .brand { display:inline-flex; flex-direction:column; align-items:center; gap:5px; color:var(--navy); font-size:24px; line-height:1.2; }
+      footer .brand small { font-size:9px; font-weight:500; letter-spacing:.16em; color:var(--muted); }
+      footer .policy-links { display:flex; flex-wrap:wrap; justify-content:center; gap:4px 6px; margin:19px 0 16px; padding-bottom:17px; border-bottom:1px solid var(--line); }
+      footer .policy-links button { padding:9px 8px; border-radius:7px; font-size:11px; color:var(--muted); text-decoration:none; cursor:pointer; transition:background .2s,color .2s; }
+      footer .policy-links button:hover { background:var(--tint); color:var(--blue); }
+      footer .policy-links button:focus-visible { outline:2px solid var(--blue); outline-offset:2px; }
+      footer p { margin:0; font-size:10px; line-height:1.7; color:#182033; }
+      footer p + p { margin-top:5px; }
+      @media(prefers-reduced-motion:reduce) { footer .policy-links button { transition:none; } }
+    </style>
+    <style>
+      #disclaimer { padding:24px 20px 10px; background:#FCFBF7; border:0; text-align:center; }
+      #disclaimer h2 { display:flex; justify-content:center; align-items:center; gap:7px; margin:0 0 13px; color:#182033; font-size:16px; font-weight:600; letter-spacing:0; }
+      #disclaimer h2 span { font-size:15px; opacity:.8; }
+      #disclaimer p { color:#182033; font-size:11px; line-height:1.72; margin:0; }
+      .page > footer { background:#FCFBF7; padding:5px 16px 26px; }
+      footer .policy-links { gap:4px 0; margin:0; padding:0; border:0; }
+      footer .policy-links button { position:relative; color:rgba(194,24,91,.85); font-family:Georgia,serif; font-size:11px; padding:6px 9px; border-radius:0; text-decoration:underline; text-underline-offset:3px; }
+      footer .policy-links button:not(:last-child)::after { content:""; position:absolute; right:0; top:11px; height:11px; border-right:1px solid #E8CDD5; }
+      footer .policy-links button:hover { color:var(--navy); background:transparent; }
+    </style>
+    <style>
+      #faq { background:var(--cream); padding:34px 20px 38px; }
+      #faq .section-head { margin-bottom:22px; }
+      #faq .kicker { font-size:13px; letter-spacing:2.5px; margin-bottom:7px; }
+      #faq .section-head h2 { font-size:27px; color:var(--navy); }
+      #faq .faq-list { display:grid; gap:10px; }
+      #faq .faq { overflow:hidden; border:1px solid var(--line); border-radius:15px; background:rgba(252,251,247,.85); box-shadow:0 5px 15px #18203308; transition:border-color .2s,box-shadow .2s,transform .2s; }
+      #faq .faq:hover { border-color:#E8CDD5; box-shadow:0 9px 22px #18203312; transform:translateY(-2px); }
+      #faq .faq button { display:flex; align-items:center; gap:12px; width:100%; min-height:58px; padding:13px 14px 13px 17px; border:0; background:transparent; color:var(--navy); text-align:left; font-size:15px; font-weight:600; line-height:1.45; }
+      #faq .faq button::before { content:"?"; display:grid; place-items:center; width:24px; height:24px; flex:0 0 24px; border-radius:8px; background:var(--tint); color:var(--blue); font-size:14px; font-weight:700; }
+      #faq .faq button span { display:grid; place-items:center; width:25px; height:25px; margin-left:auto; flex:0 0 25px; border-radius:50%; background:var(--tint); color:var(--blue); font-size:20px; font-weight:400; transition:transform .25s,background .25s; }
+      #faq .faq button[aria-expanded="true"] span { transform:rotate(45deg); background:var(--blue); color:#fff; }
+      #faq .faq:has(button[aria-expanded="true"]) { border-color:#D7A1B5; box-shadow:0 10px 25px #C2185B18; }
+      #faq .answer { padding:0 18px 16px 53px; color:var(--muted); font-size:13px; line-height:1.75; }
+      @media(max-width:360px) { #faq .section-head h2 { font-size:24px; } #faq .faq button { font-size:14px; padding-left:13px; } #faq .answer { padding-left:48px; } }
+      @media(prefers-reduced-motion:reduce) { #faq .faq,#faq .faq button span { transition:none; } }
+    </style>
+    <style>
+      /* Shared section typography, based on the product introduction.
+         Footer, disclaimer and policy dialogs retain their own typography. */
+      .page > section[id]:not(#disclaimer):not(.disclaimer) {
+        --text-kicker: 18px;
+        --text-heading: 30px;
+        --text-subheading: 20px;
+        --text-body: 16px;
+        --text-label: 14px;
+        --text-caption: 12px;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) .kicker {
+        font: 700 var(--text-kicker)/1.5 Hind, sans-serif;
+        letter-spacing: 2px;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) h2 {
+        font: 700 var(--text-heading)/1.35 Halant, serif;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) :is(h3, h4, .option-title) {
+        font: 600 var(--text-subheading)/1.45 Hind, sans-serif;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) :is(p, .answer, .quote-box) {
+        font-size: var(--text-body);
+        line-height: 1.65;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) :is(.cta, .submit, .faq button, input, .order-summary-name strong) {
+        font-size: var(--text-body);
+        line-height: 1.5;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) :is(label, .ritual-dose-label, .option-subtitle, .ritual-days span) {
+        font-size: var(--text-label);
+        line-height: 1.5;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) :is(small, .option-category, .secure, .err, .order-benefit span) {
+        font-size: var(--text-caption);
+        line-height: 1.5;
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) input::placeholder {
+        font-size: var(--text-label);
+      }
+      .page > section[id]:not(#disclaimer):not(.disclaimer) .ritual-dose strong {
+        font-size: var(--text-subheading);
+        line-height: 1.45;
+      }
+      @media (max-width: 360px) {
+        .page > section[id]:not(#disclaimer):not(.disclaimer) {
+          --text-kicker: 16px;
+          --text-heading: 28px;
+          --text-subheading: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <a class="brand" href="#home"
+          ><i class="fa-solid fa-seedling" aria-hidden="true"></i>
+          ShantanCare<small>AYURVEDIC WELLNESS</small></a
+        ><a class="header-cta" href="#order-form">ऑर्डर करें ↗</a>
+      </header>
+      <section class="banner" id="home">
+        <img class="hero-banner-image" src="images/banner.png" alt="ShantanCare Ayurvedic wellness banner" />
+      </section>
+      <section id="problem-section" class="">
+        <div class="section-head">
+          <h2>माता-पिता बनने की राह थोड़ी मुश्किल लग रही है?</h2>
+        </div>
+        <p>
+          हर महीने की उम्मीद और इंतज़ार मन पर बोझ डाल सकते हैं। Fertility से जुड़ी चुनौतियाँ महिला या पुरुष, दोनों से हो सकती हैं।
+        </p>
+        <div class="emotional-cards">
+          <article class="emotional-card">
+            <i class="fa-solid fa-people-roof" aria-hidden="true"></i>
+            <h3>अपनों की उम्मीदें</h3>
+          </article>
+          <article class="emotional-card">
+            <i class="fa-solid fa-comments" aria-hidden="true"></i>
+            <h3>बार-बार पूछे सवाल</h3>
+          </article>
+          <article class="emotional-card">
+            <i class="fa-solid fa-calendar-days" aria-hidden="true"></i>
+            <h3>नई तारीख का इंतज़ार</h3>
+          </article>
+          <article class="emotional-card">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <h3>मन की अनिश्चितता</h3>
+          </article>
+        </div>
+        <div class="quote-box">
+          आपकी journey अकेली नहीं है—हर छोटे कदम के साथ उम्मीद को जगह दें।
+        </div>
+      </section>
+      <section id="mens-concerns" class="">
+        <div class="section-head">
+          <div class="kicker">FOR HIM</div>
+          <h2>पुरुषों में Fertility से जुड़ी चुनौतियाँ</h2>
+        </div>
+        <div class="men-flow">
+          <!-- Replace each image src below with your own image path. -->
+          <article class="men-step">
+            <div class="men-image"><img src="images/men1.jpg" alt="शुक्राणुओं की संख्या का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">01</span>
+            <div class="men-caption"><h3>शुक्राणुओं की संख्या कम होना</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/men2.jpg" alt="शुक्राणुओं की गति का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">02</span>
+            <div class="men-caption"><h3>शुक्राणुओं की गति कम होना</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/men3.jpg" alt="शुक्राणुओं की गुणवत्ता का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">03</span>
+            <div class="men-caption"><h3>शुक्राणुओं की गुणवत्ता में बदलाव</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/men4.jpg" alt="ऊर्जा और stamina का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">04</span>
+            <div class="men-caption"><h3>ऊर्जा और stamina में कमी</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/men5.jpg" alt="तनाव और lifestyle का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">05</span>
+            <div class="men-caption"><h3>सेक्सुअल कमजोरी</h3></div>
+          </article>
+        </div>
+      </section>
+      <section id="womens-concerns" class="">
+        <div class="section-head">
+          <div class="kicker">FOR HER</div>
+          <h2>महिलाओं में Fertility से जुड़ी चुनौतियाँ</h2>
+        </div>
+        <div class="men-flow">
+          <!-- Shared timeline layout. Replace each image src with your own image path. -->
+          <article class="men-step">
+            <div class="men-image"><img src="images/female1.webp" alt="अनियमित पीरियड्स का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">01</span>
+            <div class="men-caption"><h3>अनियमित पीरियड्स</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/female2.png" alt="Ovulation का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">02</span>
+            <div class="men-caption"><h3>Ovulation से जुड़ी समस्या</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/female3.jpg" alt="Hormonal balance का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">03</span>
+            <div class="men-caption"><h3>Hormonal imbalance</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/female4.webp" alt="PCOS से जुड़ी चुनौतियों का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">04</span>
+            <div class="men-caption"><h3>PCOS से जुड़ी चुनौतियाँ</h3></div>
+          </article>
+          <article class="men-step">
+            <div class="men-image"><img src="images/female5.jpg" alt="Uterus wellness का प्रतीक" width="320" height="340" loading="lazy" decoding="async" /></div>
+            <span class="men-marker" aria-hidden="true">05</span>
+            <div class="men-caption"><h3>Endometriosis या uterus से जुड़ी समस्या</h3></div>
+          </article>
+        </div>
+      </section>
+      <section id="product" class="">
+        <div class="section-head">
+          <div class="kicker">MEET YOUR WELLNESS ROUTINE</div>
+          <h2>ShantanCare Ayurvedic Kit</h2>
+        </div>
+        <div class="product-panel">
+          <figure class="product-showcase">
+            <!-- Replace src below with your product photo, e.g. images/product.avif. -->
+            <img class="product-photo" src="images/product.png" alt="ShantanCare Ayurvedic Kit — illustrative product placeholder" width="480" height="360" loading="lazy" decoding="async" />
+          </figure>
+          <p class="product-description">
+            पुरुषों और महिलाओं के लिए अलग-अलग formulations के साथ तैयार की गई
+            Ayurvedic wellness kit।
+          </p>
+          <h3 class="kit-contents-heading"><i class="fa-solid fa-box-open" aria-hidden="true"></i> Kit में क्या मिलता है?</h3>
+          <div class="formula-cards">
+            <article class="formula-card">
+              <span class="formula-icon"><i class="fa-solid fa-mars" aria-hidden="true"></i></span>
+              <div>
+              <h4>पुरुषों के लिए विशेष Formula</h4>
+              <p>
+                Reproductive wellness, energy और healthy sperm parameters को
+                support करने में मदद करता है।
+              </p>
+              </div>
+            </article>
+            <article class="formula-card">
+              <span class="formula-icon"><i class="fa-solid fa-venus" aria-hidden="true"></i></span>
+              <div>
+              <h4>महिलाओं के लिए विशेष Formula</h4>
+              <p>
+                Hormonal balance, menstrual wellness और ovulation support को
+                ध्यान में रखकर तैयार किया गया है।
+              </p>
+              </div>
+            </article>
+            <article class="formula-card">
+              <span class="formula-icon"><i class="fa-regular fa-calendar-check" aria-hidden="true"></i></span>
+              <div>
+              <h4>Complete 60-Day Routine</h4>
+              <p>
+                नियमित उपयोग और healthy lifestyle के साथ fertility wellness
+                journey को support करें।
+              </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="how-it-works" class="">
+        <div class="section-head">
+          <div class="kicker">MEN’S WELLNESS</div>
+          <h2>पुरुषों के लिए कैसे काम करता है?</h2>
+        </div>
+        <div class="how-flow">
+          <!-- Each image can be replaced by changing its src path below. -->
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/menwork1.webp" alt="शुक्राणुओं का चित्रण" width="634" height="467" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>शुक्राणु उत्पादन बढ़ाता है</h3>
+              <p>
+                शुक्राणुओं की संख्या और गुणवत्ता को बेहतर बनाए रखने में मदद करता है।
+              </p>
+            </div>
+          </article>
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/menwork2.webp" alt="शुक्राणुओं की movement का चित्रण" width="625" height="400" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>गति में सुधार</h3>
+              <p>शुक्राणुओं की गति और ऊर्जा बढ़ती है</p>
+            </div>
+          </article>
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/menwork3.jpg" alt="थकान महसूस करता हुआ पुरुष" width="650" height="366" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>सेक्सुअल ताकत में सुधार</h3>
+              <p>दैनिक ऊर्जा, उत्साह और शारीरिक क्षमता को बनाए रखने में मदद करता है।</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="women-support" class="">
+        <div class="section-head">
+          <div class="kicker">WOMEN’S WELLNESS</div>
+          <h2>महिलाओं के लिए कैसे काम करता है?</h2>
+        </div>
+        <div class="how-flow">
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/femalework1.jpg" alt="Menstrual cycle का चित्रण" width="980" height="980" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>पीरियड का चक्र नियमित</h3>
+              <p>
+                मासिक चक्र को नियमित और अधिक सहज बनाए रखने में मदद करता है।
+              </p>
+            </div>
+          </article>
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/femalework2.webp" alt="महिलाओं की wellness से जुड़ी तस्वीर" width="1600" height="1066" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>हॉर्मोन संतुलन</h3>
+              <p>
+                एस्ट्रोजन और प्रोजेस्टेरोन के संतुलन को बनाए रखने में सहायक।
+              </p>
+            </div>
+          </article>
+          <article class="how-step">
+            <div class="how-symbol">
+              <img src="images/femalework3.avif" alt="Ovulation का चित्रण" width="1200" height="789" loading="lazy" decoding="async" />
+            </div>
+            <div class="how-copy">
+              <h3>ओव्यूलेशन में सुधार</h3>
+              <p>
+                नियमित ओव्यूलेशन और प्रजनन स्वास्थ्य का समर्थन
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="guidance" class="">
+        <div class="section-head">
+          <div class="kicker">A THOUGHTFUL APPROACH</div>
+          <h2>डॉक्टर क्यों सलाह देते हैं?</h2>
+        </div>
+        <figure class="doctor-profile">
+          <div class="doctor-photo-frame">
+            <!-- Replace src with your doctor-with-product photo, e.g. images/doctor-product.avif. -->
+            <img class="doctor-photo" src="images/doctor.png" alt="डॉक्टर और product की तस्वीर के लिए placeholder" width="640" height="480" loading="lazy" decoding="async" />
+          </div>
+          <figcaption class="doctor-bio">
+            <!-- Replace the placeholders with the doctor's actual name and introduction. -->
+            <div class="doctor-name-row">
+              <span class="doctor-profile-icon"><i class="fa-solid fa-user-doctor" aria-hidden="true"></i></span>
+              <h3>डॉ. अनन्या शर्मा</h3>
+            </div>
+            <p class="doctor-introduction"><strong>बी.ए.एम.एस. | आयुर्वेद विशेषज्ञ</strong><br />
+ShantanCare एक आयुर्वेदिक हर्बल फ़ॉर्मूला है, जो प्रजनन स्वास्थ्य, प्राकृतिक संतुलन और हार्मोन संतुलन को सहारा देने में मदद करता है। संतुलित आहार, स्वस्थ जीवनशैली और नियमित सेवन के साथ इसे दैनिक स्वास्थ्य दिनचर्या में शामिल किया जा सकता है।</p>
+          </figcaption>
+        </figure>
+        <div class="cards guidance">
+          <article class="card">
+            <div class="card-icon">
+              <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </div>
+            <h3>मूल कारण पर ध्यान</h3>
+            <p>
+              सिर्फ लक्षणों पर नहीं, fertility से जुड़ी समस्या के संभावित कारणों
+              को समझने पर ध्यान दिया जाता है।
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <i class="fa-solid fa-sliders" aria-hidden="true"></i>
+            </div>
+            <h3>हॉर्मोन संतुलन</h3>
+            <p>
+              शरीर के hormonal balance को प्राकृतिक तरीके से support करने में
+              मदद करता है।
+            </p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
+            </div>
+            <h3>सुरक्षित और प्रभावी</h3>
+            <p>दैनिक wellness routine में आसानी से शामिल किया जा सकता है।</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">
+              <i class="fa-solid fa-heart-pulse" aria-hidden="true"></i>
+            </div>
+            <h3>Complete Health Support</h3>
+            <p>
+              सिर्फ fertility wellness ही नहीं, बल्कि overall health और wellness
+              को भी support करता है।
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="comparison" aria-labelledby="comparison-heading">
+        <div class="section-head">
+          <div class="kicker">KNOW YOUR OPTIONS</div>
+          <h2 id="comparison-heading">IVF बनाम Ayurveda: कौन सही है?</h2>
+        </div>
+        <div class="options-frame">
+          <span class="options-versus" aria-hidden="true">VS</span>
+          <table class="options-table" aria-labelledby="comparison-heading">
+            <thead>
+              <tr>
+                <th scope="col" class="option-ivf">
+                  <span class="option-header-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></span>
+                  <span class="option-title">IVF</span>
+                  <span class="option-subtitle">Treatment</span>
+                </th>
+                <th scope="col" class="option-ayurveda">
+                  <span class="option-header-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span>
+                  <span class="option-title">आयुर्वेदिक</span>
+                  <span class="option-subtitle">ट्रीटमेंट</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="option-detail"><i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="option-category">खर्च</span><p>बहुत महंगा (5 से 10 लाख रुपये)</p></div></td>
+                <td><div class="option-detail"><i class="fa-solid fa-check" aria-hidden="true"></i><span class="option-category">खर्च</span><p>सस्ता और व्यवहारिक</p></div></td>
+              </tr>
+              <tr>
+                <td><div class="option-detail"><i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="option-category">प्रक्रिया</span><p>प्रक्रिया थकाऊ और असुविधाजनक</p></div></td>
+                <td><div class="option-detail"><i class="fa-solid fa-check" aria-hidden="true"></i><span class="option-category">प्रक्रिया</span><p>सुविधाजनक और आसान दिनचर्या</p></div></td>
+              </tr>
+              <tr>
+                <td><div class="option-detail"><i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="option-category">दृष्टिकोण</span><p>सफलता की गारंटी नहीं</p></div></td>
+                <td><div class="option-detail"><i class="fa-solid fa-check" aria-hidden="true"></i><span class="option-category">दृष्टिकोण</span><p>मूल कारण पर ध्यान</p></div></td>
+              </tr>
+              <tr>
+                <td><div class="option-detail"><i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="option-category">शरीर पर असर</span><p>शरीर पर भारी असर</p></div></td>
+                <td><div class="option-detail"><i class="fa-solid fa-check" aria-hidden="true"></i><span class="option-category">शरीर पर असर</span><p>शरीर को मजबूत बनाने में सहायक</p></div></td>
+              </tr>
+              <tr>
+                <td><div class="option-detail"><i class="fa-solid fa-xmark" aria-hidden="true"></i><span class="option-category">दवाएँ</span><p>हॉर्मोन इंजेक्शन और दवाएं</p></div></td>
+                <td><div class="option-detail"><i class="fa-solid fa-check" aria-hidden="true"></i><span class="option-category">दवाएँ</span><p>100% प्राकृतिक, कोई साइड इफेक्ट नहीं</p></div></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="ingredients" aria-labelledby="ingredients-heading">
+        <div class="section-head">
+          <div class="kicker">ROOTED IN AYURVEDA</div>
+          <h2 id="ingredients-heading">प्रमुख Ayurvedic Ingredients</h2>
+        </div>
+        <div class="herbs">
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 01</span
+              ><img src="images/ing1.avif" alt="अश्वगंधा herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>अश्वगंधा</h3>
+            </div>
+          </article>
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 02</span
+              ><img src="images/ing2.avif" alt="शतावरी herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>शतावरी</h3>
+            </div>
+          </article>
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 03</span
+              ><img src="images/ing3.avif" alt="कौंच बीज herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>कौंच बीज</h3>
+            </div>
+          </article>
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 04</span
+              ><img src="images/ing4.avif" alt="गोखरू herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>गोखरू</h3>
+            </div>
+          </article>
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 05</span
+              ><img src="images/ing5.avif" alt="पुत्रजीवक बीज herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>पुत्रजीवक बीज</h3>
+            </div>
+          </article>
+          <article class="herb">
+            <div class="herb-visual" aria-hidden="true">
+              <span>BOTANICAL 06</span
+              ><img src="images/ing6.avif" alt="मुलेठी herb" loading="lazy" decoding="async" />
+            </div>
+            <div class="herb-content">
+              <h3>मुलेठी</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="routine" class="">
+        <div class="section-head">
+          <div class="kicker">A SIMPLE DAILY RITUAL</div>
+          <h2>उपयोग करने का तरीका</h2>
+        </div>
+        <div class="ritual-cards">
+          <article class="ritual-card ritual-morning">
+            <div class="ritual-heading">
+              <span class="ritual-icon"><i class="fa-solid fa-sun" aria-hidden="true"></i></span>
+              <div><h3>सुबह</h3><p>नाश्ते के बाद</p></div>
+              <span class="ritual-step" aria-hidden="true">01</span>
+            </div>
+            <div class="ritual-doses">
+              <div class="ritual-dose"><span class="ritual-dose-label"><i class="fa-solid fa-mars" aria-hidden="true"></i>पुरुष</span><strong>1 tablet</strong></div>
+              <div class="ritual-dose"><span class="ritual-dose-label"><i class="fa-solid fa-venus" aria-hidden="true"></i>महिला</span><strong>1 tablet</strong></div>
+            </div>
+            <p class="ritual-water"><i class="fa-solid fa-glass-water" aria-hidden="true"></i>गुनगुने पानी के साथ</p>
+          </article>
+          <article class="ritual-card ritual-evening">
+            <div class="ritual-heading">
+              <span class="ritual-icon"><i class="fa-solid fa-moon" aria-hidden="true"></i></span>
+              <div><h3>शाम</h3><p>भोजन के बाद</p></div>
+              <span class="ritual-step" aria-hidden="true">02</span>
+            </div>
+            <div class="ritual-doses">
+              <div class="ritual-dose"><span class="ritual-dose-label"><i class="fa-solid fa-mars" aria-hidden="true"></i>पुरुष</span><strong>1 tablet</strong></div>
+              <div class="ritual-dose"><span class="ritual-dose-label"><i class="fa-solid fa-venus" aria-hidden="true"></i>महिला</span><strong>1 tablet</strong></div>
+            </div>
+            <p class="ritual-water"><i class="fa-solid fa-mug-hot" aria-hidden="true"></i>गुनगुने दूध या पानी के साथ</p>
+          </article>
+          <article class="ritual-duration">
+            <div class="ritual-duration-top">
+              <div class="ritual-days"><strong>60</strong><span>दिन</span></div>
+              <div><h3>नियमित routine बनाएँ</h3><p>पूरे 60 दिनों तक नियमित routine बनाए रखें।</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section id="quality" class="">
+        <div class="section-head">
+          <div class="kicker">QUALITY & TRUST</div>
+          <h2>प्रमाणित और भरोसेमंद</h2>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <div class="trust-card-image"><img src="images/cert1.avif" alt="GMP certification image" loading="lazy" decoding="async" /></div>
+            <div class="trust-card-body"><h3>GMP प्रमाणित</h3><p>उत्पादन मानकों के अनुसार तैयार।</p></div>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card-image"><img src="images/cert2.avif" alt="ISO certification image" loading="lazy" decoding="async" /></div>
+            <div class="trust-card-body"><h3>ISO प्रमाणित</h3><p>अंतरराष्ट्रीय quality standards का पालन।</p></div>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card-image"><img src="images/cert3.avif" alt="FSSAI certification image" loading="lazy" decoding="async" /></div>
+            <div class="trust-card-body"><h3>FSSAI अनुमोदित</h3><p>खाद्य सुरक्षा मानकों के अनुसार।</p></div>
+          </article>
+          <article class="trust-card">
+            <div class="trust-card-image"><img src="images/cert4.avif" alt="Ayurvedic herbs image" loading="lazy" decoding="async" /></div>
+            <div class="trust-card-body"><h3>Ayurvedic Formula</h3><p>चुनी हुई प्राकृतिक Ayurvedic herbs से तैयार।</p></div>
+          </article>
+        </div>
+      </section>
+      <section id="order-form" class="">
+        <div class="section-head">
+          <div class="kicker">ORDER YOUR KIT</div>
+          <h2>अपना ऑर्डर बुक करें</h2>
+        </div>
+        <p>केवल 2 मिनट में order पूरा करें।</p>
+        <div class="form-card">
+          <div class="order-summary">
+            <span class="order-summary-icon"><i class="fa-solid fa-box-open" aria-hidden="true"></i></span>
+            <div class="order-summary-name"><strong>ShantanCare Ayurvedic Kit</strong><small>Free Delivery · COD Available</small></div>
+          </div>
+          <form id="orderForm" onsubmit="return submitForm(event);">
+            <h3 class="order-fields-heading"><i class="fa-solid fa-address-card" aria-hidden="true"></i>अपनी जानकारी भरें</h3>
+            <input type="hidden" name="key" value="XQP4bdtEZkt3" />
+            <input type="hidden" name="date" id="date" />
+            <input type="hidden" name="utm_source" /><input
+              type="hidden"
+              name="utm_medium"
+            /><input type="hidden" name="utm_campaign" />
+            <input type="hidden" name="utm_campaign_id" /><input
+              type="hidden"
+              name="utm_adset"
+            /><input type="hidden" name="utm_adset_id" />
+            <input type="hidden" name="utm_ad" /><input
+              type="hidden"
+              name="utm_ad_id"
+            /><input type="hidden" name="utm_placement" />
+            <input type="hidden" name="event_id" id="event_id" /><input
+              type="hidden"
+              name="fbclid"
+            /><input type="hidden" name="fbc" /><input
+              type="hidden"
+              name="fbp"
+            />
+            <div class="field">
+              <label for="name"><i class="fa-regular fa-user" aria-hidden="true"></i>आपका नाम *</label
+              ><input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autocomplete="name"
+                pattern="[A-Za-z\u0900-\u097F ]+"
+                placeholder="अपना पूरा नाम दर्ज करें"
+              />
+              <div class="err" id="nameError">कृपया पूरा नाम दर्ज करें।</div>
+            </div>
+            <div class="field">
+              <label for="phone"><i class="fa-solid fa-mobile-screen-button" aria-hidden="true"></i>मोबाइल नंबर *</label
+              ><input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxlength="10"
+                inputmode="numeric"
+                autocomplete="tel"
+                pattern="[6-9][0-9]{9}"
+                required
+                placeholder="10 Digit Mobile Number"
+              />
+              <div class="err" id="phoneError">
+                कृपया सही 10 अंकों का नंबर दर्ज करें।
+              </div>
+            </div>
+            <div class="field">
+              <label for="address"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>पूरा पता *</label
+              ><input
+                id="address"
+                name="address"
+                autocomplete="street-address"
+                placeholder="मकान नंबर, गली, शहर और राज्य"
+                required
+                minlength="10"
+              />
+            </div>
+            <div class="field">
+              <label for="pincode"><i class="fa-solid fa-map-pin" aria-hidden="true"></i>पिनकोड *</label
+              ><input
+                id="pincode"
+                name="pincode"
+                autocomplete="postal-code"
+                inputmode="numeric"
+                pattern="[1-9][0-9]{5}"
+                maxlength="6"
+                placeholder="6 अंकों का पिनकोड"
+                required
+              />
+            </div>
+            <button class="submit" id="submitBtn" type="submit">
+              Confirm Your Order <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+            <div class="secure">
+              <i class="fa-solid fa-lock" aria-hidden="true"></i>Your information is secure<br /><strong
+                >COD Available | Free Delivery</strong
+              >
+            </div>
+          </form>
+          <div class="order-status" id="order-status" role="status"></div>
+        </div>
+        <h3 class="benefits-title">Order Benefits</h3>
+        <div class="order-benefit-grid">
+          <div class="order-benefit"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span>Free Delivery</span></div>
+          <div class="order-benefit"><i class="fa-solid fa-wallet" aria-hidden="true"></i><span>COD Available</span></div>
+          <div class="order-benefit"><i class="fa-solid fa-box" aria-hidden="true"></i><span>Genuine Product</span></div>
+        </div>
+      </section>
+      <section id="experiences" class="">
+        <div class="section-head">
+          <div class="kicker">CUSTOMER EXPERIENCES</div>
+          <h2>लोगों ने अपने अनुभव साझा किए</h2>
+        </div>
+        <div class="stories">
+          <article class="story">
+            <div class="story-head">
+              <!-- Add the customer photo at images/customer-1.avif. -->
+              <div class="story-photo"><span aria-hidden="true">ने</span><img src="images/test1.avif" alt="नेहा शर्मा" loading="lazy" onerror="this.style.display='none'" /></div>
+              <div class="story-person"><h3>रेखा पटेल</h3><small>प्रयागराज · 31 वर्ष</small></div>
+            </div>
+            <div class="story-quote" aria-hidden="true"><span>“</span></div>
+            <p>
+              “अनियमित पीरियड्स और हॉर्मोन असंतुलन की समस्या थी। ShantanCare को अपनी दिनचर्या में शामिल करने और lifestyle सुधार के बाद पीरियड्स में नियमितता महसूस हुई। लगभग 4 महीनों बाद गर्भधारण की खुशखबरी मिली।”
+            </p>
+          </article>
+          <article class="story">
+            <div class="story-head">
+              <!-- Add the customer photo at images/customer-2.avif. -->
+              <div class="story-photo"><span aria-hidden="true">अ</span><img src="images/test2.avif" alt="अमित वर्मा" loading="lazy" onerror="this.style.display='none'" /></div>
+              <div class="story-person"><h3>राहुल कुमार</h3><small>भोपाल · 35 वर्ष</small></div>
+            </div>
+            <div class="story-quote" aria-hidden="true"><span>“</span></div>
+            <p>
+              “मेरी sperm count रिपोर्ट पहले 12 मिलियन थी। Healthcare professional की सलाह, ShantanCare और lifestyle सुधार के बाद follow-up रिपोर्ट में यह बढ़कर 40 मिलियन हो गई। इस बदलाव से मुझे काफी प्रोत्साहन मिला।”
+            </p>
+          </article>
+          <article class="story">
+            <div class="story-head">
+              <!-- Add the customer photo at images/customer-3.avif. -->
+              <div class="story-photo"><span aria-hidden="true">का</span><img src="images/test3.avif" alt="काव्या मेहता" loading="lazy" onerror="this.style.display='none'" /></div>
+              <div class="story-person"><h3>काव्या मेहता</h3><small>उदयपुर · 38 वर्ष</small></div>
+            </div>
+            <div class="story-quote" aria-hidden="true"><span>“</span></div>
+            <p>
+              “3 वर्षों से PCOS के कारण गर्भधारण में परेशानी थी। ShantanCare Kit और डॉक्टर की सलाह के बाद सकारात्मक बदलाव महसूस हुए। अब हमारे घर में नन्हे मेहमान की उम्मीद है।”
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="faq" class="">
+        <div class="section-head">
+          <div class="kicker">HERE TO HELP</div>
+          <h2>आपके सवाल, हमारे जवाब</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="answer-1"
+            >
+              परिणाम कितने समय में दिखाई दे सकते हैं?<span aria-hidden="true"
+                >+</span
+              >
+            </button>
+            <div class="answer" id="answer-1">
+              कई लोगों को 2–3 महीनों के नियमित उपयोग के बाद बदलाव महसूस होने लगते हैं। हालांकि, हर व्यक्ति का शरीर और स्वास्थ्य अलग होता है। कुछ लोगों को शुरुआती 30 दिनों में सुधार दिख सकता है, जबकि कुछ को 3–4 महीने का समय लग सकता है। नियमितता और धैर्य बनाए रखें।
+            </div>
+          </div>
+          <div class="faq">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="answer-2"
+            >
+              क्या इसके side effects होते हैं?<span aria-hidden="true">+</span>
+            </button>
+            <div class="answer" id="answer-2">
+              नहीं, यह प्राकृतिक आयुर्वेदिक सामग्री से तैयार किया गया उत्पाद है। इसमें उपयोग किए गए घटकों की गुणवत्ता और शुद्धता की जाँच की जाती है। इसका निर्माण GMP और ISO मानकों का पालन करने वाली सुविधा में किया जाता है।
+            </div>
+          </div>
+          <div class="faq">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="answer-3"
+            >
+              क्या पुरुष और महिला दोनों को लेना ज़रूरी है?<span
+                aria-hidden="true"
+                >+</span
+              >
+            </button>
+            <div class="answer" id="answer-3">
+              हाँ, बेहतर परिणाम के लिए पुरुष और महिला दोनों को साथ में लेना सही रहता है। इससे फर्टिलिटी बेहतर होती है और सफलता की संभावना बढ़ती है।
+            </div>
+          </div>
+          <div class="faq">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="answer-5"
+            >
+              Delivery कितने दिनों में होती है?<span aria-hidden="true">+</span>
+            </button>
+            <div class="answer" id="answer-5">
+              आमतौर पर आपका ऑर्डर 5–7 कार्य दिवसों में पहुँच जाता है। दूर-दराज क्षेत्रों में डिलीवरी में थोड़ा अधिक समय लग सकता है। डिलीवरी निःशुल्क है और प्रोडक्ट को सुरक्षित, गोपनीय पैकिंग में भेजा जाता है। ऑर्डर ट्रैकिंग की सुविधा भी उपलब्ध है।
+            </div>
+          </div>
+          <div class="faq">
+            <button
+              type="button"
+              aria-expanded="false"
+              aria-controls="answer-6"
+            >
+              Payment कैसे करें?<span aria-hidden="true">+</span>
+            </button>
+            <div class="answer" id="answer-6">
+              Cash on Delivery और उपलब्ध online payment options से payment किया
+              जा सकता है।
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="disclaimer" id="disclaimer">
+        <h2><span aria-hidden="true">⚠️</span> महत्वपूर्ण नोट</h2>
+        <p>
+          यह आयुर्वेदिक उत्पाद है और परिणाम व्यक्ति से व्यक्ति में अलग हो सकते हैं।
+          यह मेडिकल ट्रीटमेंट का विकल्प नहीं है। अगर गंभीर स्वास्थ्य समस्या है,
+          तो डॉक्टर से सलाह लें। गर्भवती या स्तनपान कराने वाली महिलाओं को उपयोग
+          से पहले डॉक्टर से सलाह लेनी चाहिए। 18 साल से कम उम्र के लोगों के लिए यह सही नहीं है।
+        </p>
+      </section>
+      <footer>
+        <div class="policy-links">
+          <button type="button" onclick="openModal('privacy')">
+            Privacy Policy</button
+          ><button type="button" onclick="openModal('terms')">
+            Terms & Conditions</button
+          ><button type="button" onclick="openModal('shipping')">
+            Shipping Policy</button
+          ><button type="button" onclick="openModal('cancel')">
+            Cancellation Policy</button
+          ><button type="button" onclick="openModal('disclaimer')">
+            Legal Disclaimer
+          </button>
+        </div>
+      </footer>
+      <div class="sticky" id="order-sticky">
+        <div><strong>Free Delivery</strong><small>COD Available</small></div>
+        <a href="#order-form">अभी ऑर्डर करें</a>
+      </div>
+      <div class="loading" id="loading">
+        <div class="loading-box">
+          <div class="spinner"></div>
+          <p>आपकी request भेजी जा रही है...</p>
+        </div>
+      </div>
+    </main>
+
+    <div class="pp-overlay" id="pp-overlay" onclick="closeIfOutside(event)">
+      <div class="pp-modal" id="pp-modal">
+        <button class="pp-close" onclick="closeModal()" aria-label="Close">
+          ×
+        </button>
+        <div id="pp-content"></div>
+      </div>
+    </div>
+
+    <script>
+      // Animate compact cards once on arrival, without hiding content by default.
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const compactHowObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add('has-entered');
+            observer.unobserve(entry.target);
+          });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('#how-it-works .how-step, #women-support .how-step').forEach((card) => compactHowObserver.observe(card));
+      }
+      const $ = (s) => document.querySelector(s),
+        $$ = (s) => [...document.querySelectorAll(s)];
+
+      // Sticky order bar: hidden on the banner, visible from Problem onward, hidden on the order form.
+      const stickyOrder = $("#order-sticky");
+      const bannerSection = $(".banner");
+      const problemSection = bannerSection?.nextElementSibling || null;
+      const orderFormSection = $("#order-form");
+      let stickyFrame = 0;
+
+      function isInViewport(element) {
+        if (!element) return false;
+        const rect = element.getBoundingClientRect();
+        return rect.top < window.innerHeight && rect.bottom > 0;
+      }
+
+      function updateStickyOrder() {
+        stickyFrame = 0;
+        if (!stickyOrder) return;
+
+        const problemStarted =
+          problemSection &&
+          problemSection.getBoundingClientRect().top < window.innerHeight;
+        const hideOnBanner = isInViewport(bannerSection) && !problemStarted;
+        const hideOnOrderForm = isInViewport(orderFormSection);
+
+        stickyOrder.classList.toggle(
+          "show",
+          !(hideOnBanner || hideOnOrderForm),
+        );
+      }
+
+      function scheduleStickyUpdate() {
+        if (!stickyFrame)
+          stickyFrame = requestAnimationFrame(updateStickyOrder);
+      }
+
+      window.addEventListener("scroll", scheduleStickyUpdate, {
+        passive: true,
+      });
+      window.addEventListener("resize", scheduleStickyUpdate);
+      updateStickyOrder();
+      $$(".faq button").forEach((b) =>
+        b.addEventListener("click", () => {
+          const f = b.parentElement;
+          f.classList.toggle("open");
+          b.setAttribute("aria-expanded", String(f.classList.contains("open")));
+          b.querySelector("span").textContent = f.classList.contains("open")
+            ? "−"
+            : "+";
+        }),
+      );
+
+      const UTM_KEYS = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_campaign_id",
+        "utm_adset",
+        "utm_adset_id",
+        "utm_ad",
+        "utm_ad_id",
+        "utm_placement",
+      ];
+      function setHidden(n, v) {
+        const i = document.querySelector('#orderForm input[name="' + n + '"]');
+        if (i) i.value = v || "";
+      }
+      function cookie(n) {
+        const m = document.cookie.match(
+          new RegExp("(?:^|;\\s*)" + n + "=([^;]*)"),
+        );
+        return m ? decodeURIComponent(m[1]) : "";
+      }
+      function capture() {
+        const p = new URLSearchParams(location.search);
+        UTM_KEYS.forEach((k) =>
+          setHidden(k, p.get(k) || sessionStorage.getItem(k) || ""),
+        );
+        UTM_KEYS.forEach((k) => {
+          if (p.get(k))
+            try {
+              sessionStorage.setItem(k, p.get(k));
+            } catch (_) {
+              /* storage may be unavailable */
+            }
+        });
+        const fbclid = p.get("fbclid") || "";
+        setHidden("fbclid", fbclid);
+        setHidden(
+          "fbc",
+          cookie("_fbc") || (fbclid ? "fb.1." + Date.now() + "." + fbclid : ""),
+        );
+        setHidden("fbp", cookie("_fbp"));
+      }
+      capture();
+
+      // Order form: allow only letters/spaces in name and valid Indian mobile digits.
+      const nameInput = $("#name");
+      const phoneInput = $("#phone");
+
+      nameInput?.addEventListener("input", () => {
+        nameInput.value = nameInput.value
+          .replace(/[^A-Za-z\u0900-\u097F ]/g, "")
+          .replace(/\s{2,}/g, " ")
+          .replace(/^\s+/, "");
+        err("nameError", false);
+      });
+
+      phoneInput?.addEventListener("input", () => {
+        let value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+        if (value && !/^[6-9]/.test(value)) value = value.slice(1);
+        phoneInput.value = value;
+        err("phoneError", false);
+      });
+
+      function validName(v) {
+        return /^[A-Za-z\u0900-\u097F]+(?: [A-Za-z\u0900-\u097F]+)+$/.test(
+          v.trim(),
+        );
+      }
+      function validPhone(v) {
+        return /^[6-9][0-9]{9}$/.test(v);
+      }
+      function err(id, on) {
+        document.getElementById(id)?.classList.toggle("show", on);
+      }
+      function eventId() {
+        return globalThis.crypto?.randomUUID
+          ? globalThis.crypto.randomUUID()
+          : "evt-" + Date.now() + "-" + Math.random().toString(16).slice(2);
+      }
+      function submitForm(e) {
+        e.preventDefault();
+        const n = $("#name").value.trim(),
+          p = $("#phone").value.trim();
+        const nameOk = validName(n);
+        const phoneOk = validPhone(p);
+        err("nameError", !nameOk);
+        err("phoneError", !phoneOk);
+        if (!nameOk || !phoneOk || !e.target.reportValidity()) return false;
+        capture();
+        $("#date").value = new Intl.DateTimeFormat("en-IN", {
+          timeZone: "Asia/Kolkata",
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: false,
+        }).format(new Date());
+        $("#event_id").value = eventId();
+        const loading = $("#loading");
+        loading.classList.add("show");
+        const form = e.target,
+          formData = new FormData(form);
+        if (typeof fbq === "function")
+          fbq(
+            "track",
+            "Lead",
+            { content_name: "ShantanCare" },
+            { eventID: $("#event_id").value },
+          );
+        const endpoint = "https://script.google.com/macros/s//exec";
+        if (!endpoint || endpoint.endsWith("/macros/s//exec")) {
+          setTimeout(() => {
+            loading.classList.remove("show");
+            $("#order-status").textContent =
+              "ऑनलाइन ऑर्डर अभी उपलब्ध नहीं है। कृपया कुछ समय बाद फिर कोशिश करें।";
+          }, 350);
+          return false;
+        }
+        fetch(endpoint, { method: "POST", body: formData })
+          .then((r) => {
+            if (!r.ok) throw new Error("Submission failed");
+            form.reset();
+            location.href = "./Thankyou.html";
+          })
+          .catch(() => {
+            loading.classList.remove("show");
+            alert(
+              "नेटवर्क समस्या के कारण request भेजी नहीं जा सकी। कृपया फिर कोशिश करें।",
+            );
+          });
+        return false;
+      }
+
+      const contents = {
+        privacy: `<div class="pp-mtitle"><i class="ti ti-shield-lock" aria-hidden="true"></i>Privacy Policy</div><div class="pp-mbadge">Last updated: June 2025</div><p class="pp-mpara">ShantanCare आपकी personal information की सुरक्षा को सर्वोच्च प्राथमिकता देता है। जब आप order करते हैं तो हम निम्नलिखित जानकारी एकत्र करते हैं:</p><ul class="pp-mlist"><li>नाम, मोबाइल नंबर और delivery address</li><li>Payment details (encrypted और secure)</li><li>Order history और purchase records</li></ul><div class="pp-mhl">आपकी जानकारी किसी third-party को नहीं बेची जाती। इसका उपयोग केवल order processing और delivery के लिए किया जाता है।</div><p class="pp-mpara">हम industry-standard SSL encryption का उपयोग करते हैं। किसी भी privacy concern के लिए हमसे contact करें।</p>`,
+        terms: `<div class="pp-mtitle"><i class="ti ti-file-description" aria-hidden="true"></i>Terms & Conditions</div><div class="pp-mbadge">Please read carefully</div><p class="pp-mpara">ShantanCare का उपयोग करके आप इन terms से सहमत होते हैं:</p><ul class="pp-mlist"><li>Product results व्यक्ति-दर-व्यक्ति अलग हो सकते हैं</li><li>यह product किसी बीमारी का इलाज नहीं है — wellness supplement है</li><li>18 वर्ष से कम आयु के व्यक्ति बिना guardian consent के order न करें</li><li>Fake/fraudulent orders के लिए legal action लिया जा सकता है</li><li>Product images केवल representation के लिए हैं</li></ul><div class="pp-mhl">ShantanCare किसी भी समय बिना prior notice के prices, offers या terms बदलने का अधिकार रखता है।</div>`,
+        shipping: `<div class="pp-mtitle"><i class="ti ti-truck-delivery" aria-hidden="true"></i>Shipping Policy</div><div class="pp-mbadge">Free Delivery All India</div><p class="pp-mpara">हम पूरे India में FREE shipping प्रदान करते हैं। Delivery timeline:</p><ul class="pp-mlist"><li>Metro cities (Delhi, Mumbai, Bengaluru): 3–5 business days</li><li>Tier-2 / Tier-3 cities: 5–7 business days</li><li>Remote / rural areas: 7–10 business days</li></ul><div class="pp-mhl">Order confirm होने के 24–48 घंटे के अंदर tracking number SMS/WhatsApp पर भेजा जाएगा।</div><ul class="pp-mlist"><li>Delivery attempt 3 बार की जाएगी — उसके बाद order वापस आ जाएगा</li><li>Incorrect address की जिम्मेदारी customer की होगी</li></ul>`,
+        cancel: `<div class="pp-mtitle"><i class="ti ti-refresh" aria-hidden="true"></i>Cancellation Policy</div><div class="pp-mbadge">7-Day Easy Return</div><p class="pp-mpara">आप order confirm होने के <strong>24 घंटे के अंदर</strong> cancellation request कर सकते हैं।</p><ul class="pp-mlist"><li>Order dispatch होने के बाद cancellation संभव नहीं</li><li>Damaged या wrong product मिलने पर 7 दिन के अंदर complaint करें</li><li>Opened/used products return नहीं किए जाएंगे</li><li>Refund 5–7 business days में original payment method पर</li></ul><div class="pp-mhl">Return के लिए product original packaging में होना ज़रूरी है। Unboxing video होने पर claim जल्दी process होता है।</div>`,
+        contact: `<div class="pp-mtitle"><i class="ti ti-headset" aria-hidden="true"></i>Contact Us</div><p class="pp-mpara">हमारी team आपकी मदद के लिए Available है — सोमवार से शनिवार, सुबह 9 बजे से शाम 6 बजे तक।</p><div class="pp-cgrid"><div class="pp-citem"><i class="ti ti-phone" aria-hidden="true"></i><div class="pp-clbl">Call / WhatsApp</div><div class="pp-cval">+91 8860606078</div></div><div class="pp-citem"><i class="ti ti-mail" aria-hidden="true"></i><div class="pp-clbl">Email</div><div class="pp-cval">support@ssherbalindia.com</div></div><div class="pp-citem"><i class="ti ti-clock" aria-hidden="true"></i><div class="pp-clbl">Support Hours</div><div class="pp-cval">Mon–Sat 9am–6pm</div></div><div class="pp-citem"><i class="ti ti-message-circle" aria-hidden="true"></i><div class="pp-clbl">Response Time</div><div class="pp-cval">Within 24 hours</div></div></div>`,
+        disclaimer: `<div class="pp-mtitle"><i class="ti ti-alert-circle" aria-hidden="true"></i>Legal Disclaimer</div><div class="pp-mbadge">Important Notice</div><p class="pp-mpara">ShantanCare एक natural wellness supplement है। इस product के बारे में निम्नलिखित बातें ध्यान में रखें:</p><ul class="pp-mlist"><li>यह product किसी भी बीमारी का diagnosis, treatment, cure या prevention नहीं करता</li><li>Results individual to individual अलग हो सकते हैं</li><li>यह product FSSAI guidelines के अनुसार एक food supplement है, drug नहीं</li><li>किसी भी medical condition में उपयोग से पहले doctor से परामर्श करें</li><li>Pregnant, nursing women या किसी chronic illness वाले व्यक्ति पहले physician से consult करें</li></ul><div class="pp-mhl">Website पर दिए गए statements को Food & Drug Administration द्वारा evaluate नहीं किया गया है। यह product किसी disease को diagnose, treat, cure या prevent करने के लिए नहीं है।</div><p class="pp-mpara">Product की images, descriptions और testimonials केवल illustrative purpose के लिए हैं। ShantanCare किसी भी indirect या consequential loss के लिए उत्तरदायी नहीं है।</p>`,
+      };
+      // Policy modal does not modify body/html positioning or overflow.
+      // The fixed overlay itself blocks background interaction, so the page never reflows or shakes.
+      function lockPage() {}
+      function unlockPage() {}
+      function openModal(k) {
+        if (!contents[k]) return;
+        $("#pp-content").innerHTML = contents[k];
+        lockPage();
+        $("#pp-overlay").classList.add("show");
+        $("#pp-modal").scrollTo(0, 0);
+      }
+      function closeModal() {
+        if (!$("#pp-overlay").classList.contains("show")) return;
+        $("#pp-overlay").classList.remove("show");
+        unlockPage();
+      }
+      function closeIfOutside(e) {
+        if (e.target === $("#pp-overlay")) closeModal();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
+      });
+      $("#pp-overlay").addEventListener(
+        "wheel",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+      $("#pp-overlay").addEventListener(
+        "touchmove",
+        (e) => {
+          if (!$("#pp-modal").contains(e.target)) e.preventDefault();
+        },
+        { passive: false },
+      );
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+      window.closeIfOutside = closeIfOutside;
+    </script>
+  </body>
+</html>
